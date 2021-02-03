@@ -1,0 +1,31 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+     
+                    xmlns:v="http://schemas.microsoft.com/netfx/2009/xaml/presentation">
+    
+    <v:SolidColorBrush x:Key="Color_MainWindow" Color="#1f272a"/>
+    
+    <v:SolidColorBrush x:Key="Color_MainNavButtons" Color="#00D80D0D"/>
+    <v:SolidColorBrush x:Key="Color_MainNavButtonsText" Color="#75767a"/>
+    <v:SolidColorBrush x:Key="Color_MainNavButtonsTextFocus" Color="#edeeee"/>
+    <v:SolidColorBrush x:Key="Color_MainNavButtonsUnderlineFocus" Color="#d7aa0d"/>
+    <v:SolidColorBrush x:Key="Color_MainNavButtonsUnderline" Color="#262f35"/>
+    
+    <v:SolidColorBrush x:Key="Color_WindowControlButtonsFocus" Color="#66FFFFFF"/>
+
+    <v:SolidColorBrush x:Key="Color_ProgramNameLaberForecolor" Color="White"/>
+
+    <!--TimeTablePage--> 
+    <v:SolidColorBrush x:Key="Color_WeekListPanel" Color="#1d2228"/>
+    <v:SolidColorBrush x:Key="Color_lWeeks" Color="#ecca7b"/>
+    <v:SolidColorBrush x:Key="Color_lb_buttonBorderFocus" Color="#0bbe35"/>
+    <v:SolidColorBrush x:Key="Color_lb_buttonText" Color="White"/>
+    <v:SolidColorBrush x:Key="Color_lb_buttonBorder" Color="#ecca7b"/>
+    <v:SolidColorBrush x:Key="Color_lb_buttonBackground" Color="#242831"/>
+    <v:SolidColorBrush x:Key="Color_lb_buttonBackgroundFocus" Color="#20242e"/>
+    <v:SolidColorBrush x:Key="Color_lb_Background" Color="#181c26"/>
+
+    <Color x:Key="SelectedBackgroundColor">#FFC5CBF9</Color>
+    <Color x:Key="SelectedUnfocusedColor">#FFDDDDDD</Color>
+
+</ResourceDictionary>

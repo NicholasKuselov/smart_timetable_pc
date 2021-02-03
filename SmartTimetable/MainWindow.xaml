@@ -1,0 +1,73 @@
+﻿<Window x:Class="SmartTimetable.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SmartTimetable"
+        xmlns:viewmodels="clr-namespace:SmartTimetable.ViewModels"
+        xmlns:shell="http://schemas.microsoft.com/netfx/2009/xaml/presentation"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" ResizeMode="CanResizeWithGrip" Background="Red" BorderBrush="#FF8F8F8F" BorderThickness="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" AllowsTransparency="False" WindowStyle="None" SnapsToDevicePixels="False" >
+
+    <Window.Style>
+        <Style TargetType="{x:Type Window}">
+            <Setter Property="shell:WindowChrome.WindowChrome">
+                <Setter.Value>
+                    <shell:WindowChrome CaptionHeight="15"
+                                        CornerRadius="0"
+                                        GlassFrameThickness="0,0,0,0"
+                                        NonClientFrameEdges="None"
+                                        ResizeBorderThickness="5"
+                                        UseAeroCaptionButtons="false"
+                                        />
+                    
+                    
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Style>
+
+    <Window.Resources>
+        <ResourceDictionary>
+            
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/Templates/MainWindow/NavButtonAnimation.xaml"/>
+                <ResourceDictionary Source="/Resources/Colors/MainColors.xaml"/>
+                <ResourceDictionary Source="/Resources/Icons.xaml"/>
+                <ResourceDictionary Source="/Resources/Templates/WindowControlButtons.xaml"/>
+                <ResourceDictionary Source="/Resources/Templates/MainWindow/SettingButton.xaml"/>
+                
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+    </Window.Resources>
+
+    <Window.DataContext>
+        <viewmodels:MainViewModel></viewmodels:MainViewModel>
+    </Window.DataContext>
+
+    <Grid Background="White">
+        <DockPanel LastChildFill="True" Margin="0,0,0,0">
+            <Grid DockPanel.Dock="Top" Height="30" VerticalAlignment="Top" Background="{DynamicResource Color_MainWindow}">
+                <Label Content="{DynamicResource ProgramName}" Foreground="{DynamicResource Color_ProgramNameLaberForecolor}"  Margin="10,0,0,0"  HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="12"/>
+                <Image HorizontalAlignment="Left" Height="30" Width="30" Margin="2,0,0,0" VerticalAlignment="Top" Name="pb_Logo"/>
+
+                <Button Width="50" Command="{Binding CloseWindowCommand}" Height="30" Margin="0,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Top" Template="{DynamicResource ExitButton}" />
+                <Button Width="50" Command="{Binding MaximizeWindowCommand}" Height="30" Margin="0,0,50,0" HorizontalAlignment="Right" VerticalAlignment="Top" Template="{DynamicResource MaximizeButton}" />
+                <Button Width="50" Command="{Binding MinimizeWindowCommand}" Height="30" Margin="0,0,100,0" HorizontalAlignment="Right" VerticalAlignment="Top" Template="{DynamicResource MinimizeButton}" />
+                <Button Width="30" Height="30" Margin="0,0,155,0" HorizontalAlignment="Right" VerticalAlignment="Top" Template="{DynamicResource SettingButton}" />
+            </Grid>
+            <StackPanel DockPanel.Dock="Top" Height="40" VerticalAlignment="Top" Background="{DynamicResource Color_MainWindow}" Orientation="Horizontal" >
+                <RadioButton Style="{DynamicResource MainNavigationButtonAnim}" Template="{DynamicResource WithoutBackgroundAnim}"  Margin="10,0,0,0" HorizontalAlignment="Left" Content ="{DynamicResource bTimetable}" Name="b_Timetable" FontSize="20" Background="{DynamicResource Color_MainNavButtons}" GroupName="NavButtonGoup"/>
+
+
+                <RadioButton Style="{DynamicResource MainNavigationButtonAnim}"  Template="{DynamicResource WithoutBackgroundAnim}"  Margin="25,0,0,0" HorizontalAlignment="Left" Content ="{DynamicResource bSubjects}" Name="b_Subjects" FontSize="20" Background="{DynamicResource Color_MainNavButtons}" GroupName="NavButtonGoup"/>
+                <RadioButton  Command="{Binding testClick}" Style="{DynamicResource MainNavigationButtonAnim}"   Template="{DynamicResource WithoutBackgroundAnim}" Margin="25,0,0,0" HorizontalAlignment="Left" Content ="{DynamicResource bTeachers}" Name="b_Teachers" FontSize="20" Background="{DynamicResource Color_MainNavButtons}" GroupName="NavButtonGoup"/>
+            </StackPanel>
+            <Line X1="0" Y1="0" Y2="0" Stroke="{DynamicResource Color_MainNavButtonsUnderline}" DockPanel.Dock="Top" StrokeThickness="3" X2="860" Stretch="UniformToFill" Margin="0,0,0,0" StrokeDashCap="Square" StrokeDashArray="0 0" />
+            <Frame DockPanel.Dock="Bottom" Background="Black" Content="{Binding CurrentPage}"/>
+
+        </DockPanel>
+
+    </Grid>
+</Window>
