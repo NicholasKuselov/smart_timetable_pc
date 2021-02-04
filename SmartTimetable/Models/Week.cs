@@ -9,6 +9,8 @@ namespace SmartTimetable.Models
 {
     class Week : ViewModelBase
     {
+        
+
         public string To { get; set; }
         public string From { get; set; }
 
