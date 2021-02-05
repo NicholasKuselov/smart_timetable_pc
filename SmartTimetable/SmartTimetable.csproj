@@ -104,6 +104,7 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -133,24 +134,30 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\DataBaseModels\course.cs" />
+    <Compile Include="Models\DataBaseModels\day.cs" />
+    <Compile Include="Models\DataBaseModels\EDM_SmartTimetableDB.cs" />
+    <Compile Include="Models\DataBaseModels\group.cs" />
     <Compile Include="Models\DataBase.cs" />
-    <Compile Include="Models\DataBaseModels\Course.cs" />
-    <Compile Include="Models\DataBaseModels\Day.cs" />
-    <Compile Include="Models\DataBaseModels\Group.cs" />
-    <Compile Include="Models\DataBaseModels\Subject.cs" />
-    <Compile Include="Models\DataBaseModels\Teacher.cs" />
-    <Compile Include="Models\DataBaseModels\Timetable.cs" />
-    <Compile Include="Models\DataBaseModels\TimeTableContext.cs" />
-    <Compile Include="Models\DataBaseModels\User.cs" />
     <Compile Include="Models\Week.cs" />
     <Compile Include="Pages\Stuff.xaml.cs">
       <DependentUpon>Stuff.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Subjects.xaml.cs">
+      <DependentUpon>Subjects.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Timetable.xaml.cs">
       <DependentUpon>Timetable.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\DataBaseModels\subject.cs" />
+    <Compile Include="Models\DataBaseModels\teacher.cs" />
+    <Compile Include="Models\DataBaseModels\timetable.cs" />
+    <Compile Include="Models\DataBaseModels\users.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\StuffPageVM.cs" />
+    <Compile Include="ViewModels\SubjectPageVM.cs" />
     <Compile Include="ViewModels\TimetableWindowViewModel.cs" />
+    <Compile Include="Models\DataBaseModels\week.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -164,6 +171,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Pages\Stuff.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Subjects.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

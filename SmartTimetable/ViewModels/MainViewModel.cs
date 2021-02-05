@@ -16,13 +16,9 @@ namespace SmartTimetable.ViewModels
 {
     class MainViewModel : ViewModelBase
     {
-        
-
-        public bool AllowTrans {get;set;}
-
         private Page Timetable;
         private Page Stuff;
-        private Button tb;
+        private Page Subject;
 
         public Page CurrentPage { get; set; }
 
@@ -32,21 +28,49 @@ namespace SmartTimetable.ViewModels
         {
             Timetable = new Pages.Timetable();
             Stuff = new Pages.Stuff();
+            Subject = new Pages.Subjects();
 
             CurrentPage = Timetable;
-            AllowTrans = false;
-
         }
         
-        public ICommand testClick
+        public ICommand GoToStuffPage
         {
             get
             {
                 return new RelayCommand(() =>
                 {
-                    CurrentPage = Stuff;
+                    if (CurrentPage != Stuff)
+                    {
+                        CurrentPage = Stuff;
+                    }
+                });
+            }
+        }
+
+        public ICommand GoToSubjectPagePage
+        {
+            get
+            {
+                return new RelayCommand(() =>
+                {
+                    if (CurrentPage!=Subject)
+                    {
+                        CurrentPage = Subject;
+                    }
                     
-                    //Style appButtonStyle =  Resources["appButtonStyle"];
+                });
+            }
+        }
+        public ICommand GoToTimetablePage
+        {
+            get
+            {
+                return new RelayCommand(() =>
+                {
+                    if (CurrentPage != Timetable)
+                    {
+                        CurrentPage = Timetable;
+                    }
                 });
             }
         }
@@ -58,8 +82,6 @@ namespace SmartTimetable.ViewModels
                 return new RelayCommand(() =>
                 {
                     Application.Current.MainWindow.Close();
-
-                    //Style appButtonStyle =  Resources["appButtonStyle"];
                 });
             }
         }
@@ -71,9 +93,6 @@ namespace SmartTimetable.ViewModels
                 return new RelayCommand(() =>
                 {
                     Application.Current.MainWindow.WindowState = WindowState.Maximized;
-                    AllowTrans = true;
-
-                    //Style appButtonStyle =  Resources["appButtonStyle"];
                 });
             }
         }
@@ -85,8 +104,6 @@ namespace SmartTimetable.ViewModels
                 return new RelayCommand(() =>
                 {
                     Application.Current.MainWindow.WindowState = WindowState.Minimized;
-
-                    //Style appButtonStyle =  Resources["appButtonStyle"];
                 });
             }
         }

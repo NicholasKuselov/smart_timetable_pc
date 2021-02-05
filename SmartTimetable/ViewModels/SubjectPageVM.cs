@@ -1,16 +1,13 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight;
+using System;
 using System.Collections.Generic;
-
-
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartTimetable.Models.DataBaseModels
+namespace SmartTimetable.ViewModels
 {
-    class TimeTableContext 
+    class SubjectPageVM : ViewModelBase
     {
- 
-
     }
 }

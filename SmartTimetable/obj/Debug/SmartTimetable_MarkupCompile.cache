@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\App.xaml
-11555992672
+12-1270490666
 
-20-268317268
-146-1719447845
-MainWindow.xaml;Pages\Stuff.xaml;Pages\Timetable.xaml;Resources\Colors\MainColors.xaml;Resources\Icons.xaml;Resources\Local\lang.ru-ru.xaml;Resources\Templates\MainWindow\NavButtonAnimation.xaml;Resources\Templates\MainWindow\SettingButton.xaml;Resources\Templates\WeekListButtons.xaml;Resources\Templates\WindowControlButtons.xaml;Resources\Templates\WIndowTemplate.xaml;
+23427242723
+147-1532240593
+MainWindow.xaml;Pages\Stuff.xaml;Pages\Subjects.xaml;Pages\Timetable.xaml;Resources\Colors\MainColors.xaml;Resources\Icons.xaml;Resources\Local\lang.ru-ru.xaml;Resources\Templates\MainWindow\NavButtonAnimation.xaml;Resources\Templates\MainWindow\SettingButton.xaml;Resources\Templates\WeekListButtons.xaml;Resources\Templates\WindowControlButtons.xaml;Resources\Templates\WIndowTemplate.xaml;
 
-True
+False
 

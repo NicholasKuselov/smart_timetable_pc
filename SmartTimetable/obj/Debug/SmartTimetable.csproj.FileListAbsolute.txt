@@ -43,7 +43,6 @@ C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\SmartTimetabl
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\SmartTimetable.exe
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\SmartTimetable.pdb
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\bin\Debug\BouncyCastle.Crypto.dll
-C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\SmartTimetable.csprojAssemblyReference.cache
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\bin\Debug\Google.Protobuf.dll
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\bin\Debug\K4os.Compression.LZ4.dll
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\bin\Debug\K4os.Compression.LZ4.Streams.dll
@@ -69,3 +68,7 @@ C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\bin\Debug\System.Buffer
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\bin\Debug\System.Memory.xml
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\SmartTimetable.csproj.CoreCompileInputs.cache
+C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Pages\Subjects.g.cs
+C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Pages\Subjects.baml
+C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\SmartTimetable.csprojAssemblyReference.cache

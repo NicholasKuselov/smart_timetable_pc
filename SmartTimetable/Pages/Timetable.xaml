@@ -37,9 +37,10 @@
                 </ListBox>
 
             </StackPanel>
-            <Frame DockPanel.Dock="Right" Background="Black" Name="frame_Timetable" >
-
-            </Frame>
+            <DataGrid DockPanel.Dock="Right" Background="White" Name="DG_Timetable" AutoGenerateColumns="False" ItemsSource="{Binding ts}">
+                <DataGridTextColumn Binding="{Binding course1.number}" Header="Модель" Width="100"/>
+               
+            </DataGrid>
         </DockPanel>
     </Grid>
 </Page>

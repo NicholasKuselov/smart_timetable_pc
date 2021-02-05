@@ -36,7 +36,7 @@
                 <ResourceDictionary Source="/Resources/Icons.xaml"/>
                 <ResourceDictionary Source="/Resources/Templates/WindowControlButtons.xaml"/>
                 <ResourceDictionary Source="/Resources/Templates/MainWindow/SettingButton.xaml"/>
-                
+                <ResourceDictionary Source="/Resources/Templates/WeekListButtons.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
 
@@ -58,14 +58,12 @@
                 <Button Width="30" Height="30" Margin="0,0,155,0" HorizontalAlignment="Right" VerticalAlignment="Top" Template="{DynamicResource SettingButton}" />
             </Grid>
             <StackPanel DockPanel.Dock="Top" Height="40" VerticalAlignment="Top" Background="{DynamicResource Color_MainWindow}" Orientation="Horizontal" >
-                <RadioButton Style="{DynamicResource MainNavigationButtonAnim}" Template="{DynamicResource WithoutBackgroundAnim}"  Margin="10,0,0,0" HorizontalAlignment="Left" Content ="{DynamicResource bTimetable}" Name="b_Timetable" FontSize="20" Background="{DynamicResource Color_MainNavButtons}" GroupName="NavButtonGoup"/>
-
-
-                <RadioButton Style="{DynamicResource MainNavigationButtonAnim}"  Template="{DynamicResource WithoutBackgroundAnim}"  Margin="25,0,0,0" HorizontalAlignment="Left" Content ="{DynamicResource bSubjects}" Name="b_Subjects" FontSize="20" Background="{DynamicResource Color_MainNavButtons}" GroupName="NavButtonGoup"/>
-                <RadioButton  Command="{Binding testClick}" Style="{DynamicResource MainNavigationButtonAnim}"   Template="{DynamicResource WithoutBackgroundAnim}" Margin="25,0,0,0" HorizontalAlignment="Left" Content ="{DynamicResource bTeachers}" Name="b_Teachers" FontSize="20" Background="{DynamicResource Color_MainNavButtons}" GroupName="NavButtonGoup"/>
+                <RadioButton Command="{Binding GoToTimetablePage}" Style="{DynamicResource MainNavigationButtonAnim}" Template="{DynamicResource WithoutBackgroundAnim}"  Margin="10,0,0,0" HorizontalAlignment="Left" Content ="{DynamicResource bTimetable}" Name="b_Timetable" FontSize="20" Background="{DynamicResource Color_MainNavButtons}" GroupName="NavButtonGoup"/>
+                <RadioButton Command="{Binding GoToSubjectPagePage}" Style="{DynamicResource MainNavigationButtonAnim}"  Template="{DynamicResource WithoutBackgroundAnim}"  Margin="25,0,0,0" HorizontalAlignment="Left" Content ="{DynamicResource bSubjects}" Name="b_Subjects" FontSize="20" Background="{DynamicResource Color_MainNavButtons}" GroupName="NavButtonGoup"/>
+                <RadioButton Command="{Binding GoToStuffPage}" Style="{DynamicResource MainNavigationButtonAnim}"   Template="{DynamicResource WithoutBackgroundAnim}" Margin="25,0,0,0" HorizontalAlignment="Left" Content ="{DynamicResource bTeachers}" Name="b_Teachers" FontSize="20" Background="{DynamicResource Color_MainNavButtons}" GroupName="NavButtonGoup"/>
             </StackPanel>
             <Line X1="0" Y1="0" Y2="0" Stroke="{DynamicResource Color_MainNavButtonsUnderline}" DockPanel.Dock="Top" StrokeThickness="3" X2="860" Stretch="UniformToFill" Margin="0,0,0,0" StrokeDashCap="Square" StrokeDashArray="0 0" />
-            <Frame DockPanel.Dock="Bottom" Background="Black" Content="{Binding CurrentPage}"/>
+            <Frame DockPanel.Dock="Bottom" Background="Black" Content="{Binding CurrentPage}" NavigationUIVisibility="Hidden" />
 
         </DockPanel>
 

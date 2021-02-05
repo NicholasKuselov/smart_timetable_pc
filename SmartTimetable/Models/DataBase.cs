@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,8 +7,11 @@ using System.Threading.Tasks;
 
 namespace SmartTimetable.Models
 {
-    class DataBase
+    static class DataBase
     {
+        public static EDM_SmartTimetableDB timetableDB =new EDM_SmartTimetableDB() ;
+
+        
         public static IEnumerable<Week> GetWeeks()
         {
             return new Week[]

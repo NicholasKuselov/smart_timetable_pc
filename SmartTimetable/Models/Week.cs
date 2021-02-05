@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SmartTimetable.Models
 {
-    class Week : ViewModelBase
+    class Week
     {
         
 
