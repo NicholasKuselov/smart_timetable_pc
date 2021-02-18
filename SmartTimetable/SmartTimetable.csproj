@@ -139,6 +139,8 @@
     <Compile Include="Models\DataBaseModels\EDM_SmartTimetableDB.cs" />
     <Compile Include="Models\DataBaseModels\group.cs" />
     <Compile Include="Models\DataBase.cs" />
+    <Compile Include="Models\LessonsTime.cs" />
+    <Compile Include="Models\LessonTimeModel.cs" />
     <Compile Include="Models\Week.cs" />
     <Compile Include="Pages\Stuff.xaml.cs">
       <DependentUpon>Stuff.xaml</DependentUpon>
@@ -153,6 +155,9 @@
     <Compile Include="Models\DataBaseModels\teacher.cs" />
     <Compile Include="Models\DataBaseModels\timetable.cs" />
     <Compile Include="Models\DataBaseModels\users.cs" />
+    <Compile Include="Pages\TinetableCreationStage.xaml.cs">
+      <DependentUpon>TinetableCreationStage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\StuffPageVM.cs" />
     <Compile Include="ViewModels\SubjectPageVM.cs" />
@@ -182,6 +187,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\TinetableCreationStage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Resources\Colors\MainColors.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -199,6 +208,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Resources\Templates\MainWindow\SettingButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Templates\TimetableTemplate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -19,6 +19,10 @@ namespace SmartTimetable
         [StringLength(45)]
         public string Date { get; set; }
 
+        [Required]
+        [StringLength(45)]
+        public string Time { get; set; }
+
         public int Day { get; set; }
 
         public int Week { get; set; }

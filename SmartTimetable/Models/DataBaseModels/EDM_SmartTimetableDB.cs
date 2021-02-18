@@ -78,6 +78,10 @@ namespace SmartTimetable
                 .Property(e => e.Date)
                 .IsUnicode(false);
 
+            modelBuilder.Entity<timetable>()
+                .Property(e => e.Time)
+                .IsUnicode(false);
+
             modelBuilder.Entity<users>()
                 .Property(e => e.login)
                 .IsUnicode(false);

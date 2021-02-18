@@ -1,5 +1,4 @@
-﻿using SmartTimetable.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,18 +16,13 @@ using System.Windows.Shapes;
 namespace SmartTimetable.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для Timetable.xaml
+    /// Логика взаимодействия для TinetableCreationStage.xaml
     /// </summary>
-    public partial class Timetable : Page
+    public partial class TinetableCreationStage : Page
     {
-        public Timetable()
+        public TinetableCreationStage()
         {
             InitializeComponent();
-            DataContext = new TimetableWindowViewModel();
-            //((TimetableWindowViewModel)DataContext).
-            RowDefinition row = new RowDefinition();
-            //row.Na
-            //testGrid.RowDefinitions.
         }
     }
 }
