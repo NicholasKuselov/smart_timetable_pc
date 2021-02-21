@@ -10,6 +10,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
@@ -17,6 +18,21 @@ namespace SmartTimetable.ViewModels
 {
     class TimetableWindowViewModel : ViewModelBase
     {
+        //Propertys
+        private week _CurrentWeek;
+        public week CurrentWeek
+        {
+            get
+            {
+                return _CurrentWeek;
+            }
+            set
+            {
+                _CurrentWeek = value;
+                OnListBoxSelectItemChange(value);
+            }
+        }
+        public int WeekListWidth { get; set; } = (int)WeekListWidthState.Open;
         public Page page { get; set; }
         public BindingList<group> groups { get; set; }
         public BindingList<course> courses { get; set; }
@@ -24,11 +40,8 @@ namespace SmartTimetable.ViewModels
         public BindingList<teacher> teachers { get; set; }
         public BindingList<week> weeks { get; set; }
         public BindingList<subject> subjects { get; set; }
-
         public BindingList<timetable> currentWeekTimetable { get; set; }
-
         public int currentWeekId { get; set; }
-
         public BindingList<timetable> FirstDay { get; set; }
         public BindingList<timetable> SecondDay { get; set; }
         public BindingList<timetable> ThirdDay { get; set; }
@@ -37,15 +50,60 @@ namespace SmartTimetable.ViewModels
         public BindingList<timetable> SixthDay { get; set; }
 
         List<BindingList<timetable>> Days = new List<BindingList<timetable>>();
+        public BindingList<string> groupsForTable { get; set; }
+        public WeekDate weekDate { get; set; } //Содержит в себе все даты недели, с пнд по сбт.
 
-        //public EDM_SmartTimetableDB timetableDB { get; set; }
-
+        //Constr
         public TimetableWindowViewModel()
-        {
-            //timetableDB = new EDM_SmartTimetableDB();
-            currentWeekId = 1;
+        { 
+            weekDate = new WeekDate();
+            InitTable();
+        }
 
-            page = new TinetableCreationStage();
+        //Commands
+
+        public ICommand testClick
+        {
+            get
+            {
+                return new RelayCommand(() =>
+                {
+                    DataBase.timetableDB.SaveChanges();
+                });
+            }
+        }
+        public ICommand ChangeWeekListWidth
+        {
+            get
+            {
+                return new RelayCommand(() =>
+                {
+                    if(WeekListWidth == (int)WeekListWidthState.Open)
+                    {
+                        WeekListWidth = (int)WeekListWidthState.Close;
+                    }
+                    else
+                    {
+                        WeekListWidth = (int)WeekListWidthState.Open;
+                    }
+                });
+            }
+        }
+        public ICommand Save
+        {
+            get
+            {
+                return new RelayCommand(() =>
+                {
+                    UpdateTable();
+                });
+            }
+        }
+
+        //Methods
+        private void InitTable() //Вызывается при изменении выбранной недели или при запуске программы
+        {
+            Days.Clear();
 
             DataBase.timetableDB.week.Load();
             DataBase.timetableDB.teacher.Load();
@@ -60,8 +118,12 @@ namespace SmartTimetable.ViewModels
             timetables = DataBase.timetableDB.timetable.Local.ToBindingList();
             courses = DataBase.timetableDB.course.Local.ToBindingList();
             subjects = DataBase.timetableDB.subject.Local.ToBindingList();
+
+            if(CurrentWeek == null) CurrentWeek = weeks[0];
+           
             currentWeekTimetable = new BindingList<timetable>(timetables.Where(p => p.Week == currentWeekId).ToList<timetable>());
-            IEnumerable<timetable> fff = timetables.Where(p => p.Week == 1);
+      
+            groupsForTable = new BindingList<string>(CreateGroup());
 
             FirstDay = new BindingList<timetable>();
             SecondDay = new BindingList<timetable>();
@@ -76,48 +138,30 @@ namespace SmartTimetable.ViewModels
             Days.Add(FourthDay);
             Days.Add(FifthDay);
             Days.Add(SixthDay);
-            //for (int i = 0; i < Days.Count; i++)
-            //{
-            //    Days[i] = new BindingList<timetable>();
-            //}
-            //weeks = 
-            //Weeks = new ObservableCollection<Week>(DataBase.GetWeeks());
+
             CreateDays();
         }
-
-        public ICommand testClick
-        {
-            get
-            {
-                return new RelayCommand(() =>
-                {
-                    DataBase.timetableDB.SaveChanges();
-                });
-            }
-        }
-
-
         public void CreateDays()
         {
-            string testDate = "08:02:21";
-            
+            string[] dateStr = GetWeekById(currentWeekId).dateFrom.Split('.');
+            DateTime date = new DateTime(Convert.ToInt32(dateStr[2]), Convert.ToInt32(dateStr[1]), Convert.ToInt32(dateStr[0]));
+         
+            weekDate.CreateDate(date);
+  
             for (int i = 0; i < Days.Count; i++)
             {
-               
                 foreach (course f_course in courses)
                 {
                     foreach (group f_group in groups)
                     {
                         foreach (LessonTimeModel f_Time in LessonsTime.lessonTimes)
                         {
-                            //if(currentWeekTimetable.Where(p => p.Date == testDate.ToString() && p.Time == f_Time.GetTime() && p.Day == i + 1 && p.Course == f_course.idcourse && p.Group == f_group.idgroup).ToList<timetable>().Count>0)
-
-                            timetable tt = CheckLesson(currentWeekTimetable.ToList<timetable>(), testDate.ToString(), f_Time.GetTime(), i + 1, f_course.idcourse, f_group.idgroup);
+                            timetable tt = CheckLesson(currentWeekTimetable.ToList<timetable>(), date.AddDays(i).ToShortDateString(), f_Time.GetTime(), i + 1, f_course.idcourse, f_group.idgroup);
 
                             if (tt == null)
-                            {
+                            {                              
                                 tt = new timetable();
-                                tt.Date = testDate.ToString(); //??
+                                tt.Date = date.AddDays(i).ToShortDateString();
                                 tt.Day = i + 1;
                                 tt.Week = currentWeekId;
                                 tt.Group = f_group.idgroup;
@@ -131,13 +175,26 @@ namespace SmartTimetable.ViewModels
                
             }
         }
-
-        public void MergerTable()
+        public void UpdateTable() //Синхронизация таблиц в программе и бд, путем записи-перезаписи табл в бд
         {
-            
+            for (int i = 0; i < Days.Count; i++)
+            {
+                for (int j = 0; j < Days[i].Count; j++)
+                {
+                    if (Days[i][j].teacher1 != null && Days[i][j].subject1 != null && !timetables.Contains(Days[i][j]))
+                    {
+                        Days[i][j].idtimetable = timetables[timetables.Count - 1].idtimetable+1;
+                        timetables.Add(Days[i][j]);
+                    }
+                  //  else if (Days[i][j].teacher1 == null && Days[i][j].subject1 == null && timetables.Contains(Days[i][j]))
+                   // {
+                   //     timetables.Remove(Days[i][j]);
+                 //   }
+                }  
+            }
+            DataBase.timetableDB.SaveChanges();
         }
-
-        private timetable CheckLesson(List<timetable> currWeek, string date,string time,int day,int course,int group)
+        private timetable CheckLesson(List<timetable> currWeek, string date,string time,int day,int course,int group) //Проверка урока на наличие в бд
         {
            
             for (int i = 0; i < currWeek.Count; i++)
@@ -149,7 +206,52 @@ namespace SmartTimetable.ViewModels
             }
 
             return null; 
+        } 
+        private week GetWeekById(int id)
+        {
+            for (int i = 0; i < weeks.ToList<week>().Count; i++)
+            {
+                if (weeks.ToList<week>()[i].idweek == id) return weeks.ToList<week>()[i];
+            }
+            return null;
         }
+        private List<string> CreateGroup() //Создание групп для понятного отображения, напр. ИПЗ 1 , КИ 2 и тд.
+        {
+            List<string> groupAbbreviation = new List<string>();
+            List<string> groupsForShow = new List<string>();
+            foreach (group f_group in groups)
+            {
+                groupAbbreviation.Add(CreateAbbreviation(f_group.name));
+            }
 
+            foreach (course f_course in courses)
+            {
+                foreach (string f_group in groupAbbreviation)
+                {
+                    groupsForShow.Add(f_group + " " + f_course.number.ToString());
+                }
+            }
+            return groupsForShow;
+        }
+        private string CreateAbbreviation(string name)
+        {
+            string[] mas = name.Split(' ');
+            string res = "";
+            for (int i = 0; i < mas.Length; i++)
+            {
+                res += mas[i][0];
+            }
+
+            return res.ToUpper(); ;
+        }
+        private void OnListBoxSelectItemChange(week item)
+        {
+            currentWeekId = item.idweek;
+        }
+    }
+
+    enum WeekListWidthState {
+        Open = 200,
+        Close = 25,
     }
 }

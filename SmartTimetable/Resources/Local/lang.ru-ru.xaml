@@ -13,4 +13,19 @@
     <!--Timetable page-->
     <v:String x:Key="lWeeks">Недели</v:String>
     <v:String x:Key="bAddWeek">Добавить</v:String>
+
+    <!--Days-->
+    <v:String x:Key="FirstDay">Понедельник</v:String>
+    <v:String x:Key="SecondDay">Вторник</v:String>
+    <v:String x:Key="ThirdDay">Среда</v:String>
+    <v:String x:Key="FourthDay">Четверг</v:String>
+    <v:String x:Key="FifthDay">Пятница</v:String>
+    <v:String x:Key="SixthDay">Суббота</v:String>
+
+    <!--Timetable DataGrid-->
+    <v:String x:Key="Group">Группа</v:String>
+    <v:String x:Key="Time">Время</v:String>
+    <v:String x:Key="Subject">Дисциплина</v:String>
+    <v:String x:Key="Teacher">Преподаватель</v:String>
+
 </ResourceDictionary>

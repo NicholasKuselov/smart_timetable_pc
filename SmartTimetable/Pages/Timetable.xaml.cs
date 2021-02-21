@@ -25,10 +25,6 @@ namespace SmartTimetable.Pages
         {
             InitializeComponent();
             DataContext = new TimetableWindowViewModel();
-            //((TimetableWindowViewModel)DataContext).
-            RowDefinition row = new RowDefinition();
-            //row.Na
-            //testGrid.RowDefinitions.
         }
     }
 }

@@ -142,6 +142,7 @@
     <Compile Include="Models\LessonsTime.cs" />
     <Compile Include="Models\LessonTimeModel.cs" />
     <Compile Include="Models\Week.cs" />
+    <Compile Include="Models\WeekDate.cs" />
     <Compile Include="Pages\Stuff.xaml.cs">
       <DependentUpon>Stuff.xaml</DependentUpon>
     </Compile>
@@ -208,6 +209,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Resources\Templates\MainWindow\SettingButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Templates\TimetableDataGridStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Templates\TimetableDataGridTemplate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -28,4 +28,18 @@
     <Color x:Key="SelectedBackgroundColor">#FFC5CBF9</Color>
     <Color x:Key="SelectedUnfocusedColor">#FFDDDDDD</Color>
 
+    <!--Timetable grid-->
+    <v:SolidColorBrush x:Key="Color_DayNameForeground" Color="#fffffe"/>
+    <v:SolidColorBrush x:Key="Color_DayDateForeground" Color="#6e7379"/>
+
+    <v:SolidColorBrush x:Key="Color_DaysColumnsBackground" Color="#1d2228"/>
+
+    
+    <!--Timetable datagrid-->
+    <v:SolidColorBrush x:Key="Color_FirstRowBackground" Color="#38414a"/>
+    <v:SolidColorBrush x:Key="Color_SecondRowBackground" Color="#454e55"/>
+    <v:SolidColorBrush x:Key="Color_ColumnBorder" Color="#293137"/>
+    <v:SolidColorBrush x:Key="Color_RowHeaderBackground" Color="#1f272a"/>
+    <v:SolidColorBrush x:Key="Color_RowHeaderForeground" Color="#c4c6ca"/>
+
 </ResourceDictionary>
