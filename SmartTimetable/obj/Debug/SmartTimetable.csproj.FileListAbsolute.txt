@@ -20,7 +20,6 @@ C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Resources\Col
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Resources\Local\lang.ru-ru.baml
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Resources\Templates\WeekListButtons.baml
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Resources\Templates\WindowControlButtons.baml
-C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Resources\Templates\WIndowTemplate.baml
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\MainWindow.g.cs
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Pages\Stuff.g.cs
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Pages\Timetable.g.cs
@@ -71,9 +70,9 @@ C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\bin\Debug\System.Runtim
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\SmartTimetable.csproj.CoreCompileInputs.cache
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Pages\Subjects.g.cs
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Pages\Subjects.baml
-C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Resources\Templates\TimetableTemplate.baml
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Pages\TinetableCreationStage.g.cs
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Pages\TinetableCreationStage.baml
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Resources\Templates\TimetableDataGridStyles.baml
-C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Resources\Templates\TimetableDataGridTemplate.baml
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\SmartTimetable.csprojAssemblyReference.cache
+C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Resources\Templates\TimetableToolBarControls.baml
+C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Resources\Templates\StuffAndSubjectsDataGridStyle.baml

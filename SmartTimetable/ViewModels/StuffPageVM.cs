@@ -29,7 +29,7 @@ namespace SmartTimetable.ViewModels
                 //MessageBox.Show(timetableDB.teacher.);      
         }
 
-        public ICommand testClick
+        public ICommand Save
         {
             get
             {

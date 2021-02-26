@@ -18,7 +18,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/Resources/Templates/WeekListButtons.xaml"/>
                 <ResourceDictionary Source="/Resources/Templates/TimetableDataGridStyles.xaml"/>
-
+                <ResourceDictionary Source="/Resources/Templates/TimetableToolBarControls.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
 
@@ -28,9 +28,9 @@
     </Page.DataContext>
     <Grid>
         <DockPanel DockPanel.Dock="Bottom" Background="Brown">
-            <StackPanel CanHorizontallyScroll="False" DockPanel.Dock="Left" Width="{Binding WeekListWidth}" Name="stackPanel_WeeksList" Background="{DynamicResource Color_WeekListPanel}">
+            <StackPanel CanHorizontallyScroll="False" DockPanel.Dock="Left" Width="{Binding WeekListWidth}" Name="stackPanel_WeeksList" Background="{DynamicResource Color_lb_Background}">
 
-                <Grid Width="{Binding WeekListWidth}">
+                <Grid Width="{Binding WeekListWidth}" Height="30" Background="{DynamicResource Color_WeekListPanel}">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="20"></ColumnDefinition>
                         <ColumnDefinition Width="*"></ColumnDefinition>
@@ -40,20 +40,18 @@
                     <Label Grid.Column="1" Content="{DynamicResource lWeeks}" HorizontalAlignment="Center" Foreground="{DynamicResource Color_lWeeks}" FontSize="14"/>
 
                 </Grid>
-                <ListBox HorizontalAlignment="Stretch" ItemsSource="{Binding weeks}" VerticalAlignment="Stretch" HorizontalContentAlignment="Stretch" ItemContainerStyle="{DynamicResource Lststyle}" Background="{DynamicResource Color_lb_Background}" BorderThickness="0,0,0,0" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectedItem="{Binding CurrentWeek}">
-
+                <ListBox HorizontalAlignment="Stretch" Visibility="{Binding WeekListVisability}" ItemsSource="{Binding weeks}" VerticalAlignment="Stretch" HorizontalContentAlignment="Stretch" ItemContainerStyle="{DynamicResource Lststyle}" Background="{DynamicResource Color_lb_Background}" BorderThickness="0,0,0,0" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectedItem="{Binding CurrentWeek}">
 
                 </ListBox>
-
             </StackPanel>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="20"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
 
-                <StackPanel Grid.Row="0" Background="AliceBlue" Orientation="Horizontal" FlowDirection="RightToLeft">
-                    <Button Width="15" Height="15" Background="Red" HorizontalAlignment="Left" Command="{Binding Save}"/>
+                <StackPanel Grid.Row="0" Orientation="Horizontal" FlowDirection="LeftToRight" Background="{DynamicResource Color_WeekListPanel}">
+                    <Button Width="25" Height="25" Background="Red" HorizontalAlignment="Left" Command="{Binding Save}" Template="{DynamicResource SaveButton}"/>
                 </StackPanel>
 
                 <ScrollViewer Grid.Row="1">
@@ -104,9 +102,9 @@
                             <Label Content="{Binding weekDate.SixthDay}"   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" Margin="0,2,0,0" Foreground="{DynamicResource Color_DayDateForeground}"></Label>
                         </StackPanel>
 
-                        <DataGrid Grid.Row="2" Grid.Column="0" ColumnHeaderStyle="{DynamicResource GroupDataGridRowHeaderStyle}" AlternationCount="2" ScrollViewer.CanContentScroll="False" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RowStyle="{DynamicResource GroupDataGridRowStyle}" ItemsSource="{Binding groupsForTable}" AutoGenerateColumns="False" VerticalScrollBarVisibility="Disabled">
+                        <DataGrid Grid.Row="2" Grid.Column="0" HeadersVisibility ="Column"  ColumnHeaderStyle="{DynamicResource GroupDataGridRowHeaderStyle}" AlternationCount="2" ScrollViewer.CanContentScroll="False" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RowStyle="{DynamicResource GroupDataGridRowStyle}" ItemsSource="{Binding groupsForTable}" AutoGenerateColumns="False" VerticalScrollBarVisibility="Disabled">
                             <DataGrid.Columns>
-                                <DataGridTemplateColumn Header="{DynamicResource Group}">
+                                <DataGridTemplateColumn Header="{DynamicResource Group}" Width="*">
                                     <DataGridTemplateColumn.CellTemplate>
                                         <DataTemplate>
                                             <TextBlock Text="{Binding}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
@@ -116,10 +114,10 @@
                             </DataGrid.Columns>
                         </DataGrid>
 
-                        <DataGrid Grid.Row="2" Grid.Column="1" ItemsSource="{Binding FirstDay}" Style="{DynamicResource TimetableDataGridStyle}" >
+                        <DataGrid Grid.Row="2" Grid.Column="1" ItemsSource="{Binding FirstDay}" Style="{DynamicResource TimetableDataGridStyle}" SelectionUnit="CellOrRowHeader" >
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="{DynamicResource Time}" Binding="{Binding Time}" Width="*"  Foreground="{DynamicResource Color_RowHeaderForeground}"></DataGridTextColumn>
-                                <DataGridComboBoxColumn  Header="{DynamicResource Subject}" ItemsSource="{Binding Source={StaticResource subjects}}" SelectedItemBinding="{Binding Path=subject1}" DisplayMemberPath="name" Width="*"></DataGridComboBoxColumn>
+                                <DataGridTextColumn Header="{DynamicResource Time}" Binding="{Binding Time}" Width="*"></DataGridTextColumn>
+                                <DataGridComboBoxColumn  Header="{DynamicResource Subject}" ItemsSource="{Binding Source={StaticResource subjects}}" SelectedItemBinding="{Binding Path=subject1}" DisplayMemberPath="name" Width="*">                                </DataGridComboBoxColumn>
                                 <DataGridComboBoxColumn  Header="{DynamicResource Teacher}" ItemsSource="{Binding Source={StaticResource teachers}}" SelectedItemBinding="{Binding Path=teacher1}" DisplayMemberPath="name" Width="*"></DataGridComboBoxColumn>
                             </DataGrid.Columns>
                         </DataGrid>
@@ -167,7 +165,6 @@
                     </Grid>
                 </ScrollViewer>
             </Grid>
-            
         </DockPanel>
     </Grid>
 </Page>

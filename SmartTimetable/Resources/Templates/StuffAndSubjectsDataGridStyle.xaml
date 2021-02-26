@@ -1,0 +1,31 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <Style TargetType="{x:Type DataGridRow}" x:Key="MainTableRowStyle">
+        <Setter Property="Foreground" Value="{DynamicResource Color_RowHeaderForeground}"/>
+        <Setter Property="Background" Value="{DynamicResource Color_FirstRowBackground}"></Setter>
+    </Style>
+
+
+    <Style TargetType="DataGridColumnHeader" x:Key="GroupDataGridRowHeaderStyle" >
+        <Setter Property="Background" Value="{DynamicResource Color_RowHeaderBackground}"></Setter>
+        <Setter Property="Foreground" Value="{DynamicResource Color_RowHeaderForeground}"></Setter>
+        <Setter Property="BorderBrush" Value="{DynamicResource Color_ColumnBorder}" />
+        <Setter Property="BorderThickness" Value="1" />
+    </Style>
+
+    <Style TargetType="DataGrid" x:Key="DataGridStyle" >
+        <Setter Property="RowStyle" Value="{DynamicResource MainTableRowStyle}"></Setter>
+        <Setter Property="ScrollViewer.CanContentScroll" Value="True" />
+        <Setter Property="AutoGenerateColumns" Value="False" />
+        <Setter Property="CanUserSortColumns" Value="False" />
+        <Setter Property="CanUserResizeRows" Value="False" />
+        <Setter Property="RowDetailsVisibilityMode" Value="Collapsed" />
+        <Setter Property="SelectionMode" Value="Single"/>
+        <Setter Property="HeadersVisibility" Value="Column"/>
+        <Setter Property="HorizontalGridLinesBrush" Value="{DynamicResource Color_ColumnBorder}"/>
+        <Setter Property="VerticalGridLinesBrush" Value="{DynamicResource Color_ColumnBorder}"/>
+        <Setter Property="ColumnHeaderStyle" Value="{DynamicResource GroupDataGridRowHeaderStyle}"/>
+    </Style>
+
+</ResourceDictionary>

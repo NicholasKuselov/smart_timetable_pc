@@ -19,6 +19,8 @@ namespace SmartTimetable.ViewModels
     class TimetableWindowViewModel : ViewModelBase
     {
         //Propertys
+        public Visibility WeekListVisability { get; set; } = Visibility.Visible;
+
         private week _CurrentWeek;
         public week CurrentWeek
         {
@@ -81,10 +83,12 @@ namespace SmartTimetable.ViewModels
                     if(WeekListWidth == (int)WeekListWidthState.Open)
                     {
                         WeekListWidth = (int)WeekListWidthState.Close;
+                        WeekListVisability = Visibility.Hidden;
                     }
                     else
                     {
                         WeekListWidth = (int)WeekListWidthState.Open;
+                        WeekListVisability = Visibility.Visible;
                     }
                 });
             }

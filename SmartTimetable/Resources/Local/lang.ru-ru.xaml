@@ -28,4 +28,10 @@
     <v:String x:Key="Subject">Дисциплина</v:String>
     <v:String x:Key="Teacher">Преподаватель</v:String>
 
+    <!--Stuff DataGrid-->
+    <v:String x:Key="StuffName">ФИО</v:String>
+    <v:String x:Key="StuffMail">Почта</v:String>
+
+
+
 </ResourceDictionary>

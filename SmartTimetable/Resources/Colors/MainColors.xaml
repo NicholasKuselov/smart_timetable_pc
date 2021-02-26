@@ -12,6 +12,7 @@
     <v:SolidColorBrush x:Key="Color_MainNavButtonsUnderline" Color="#262f35"/>
     
     <v:SolidColorBrush x:Key="Color_WindowControlButtonsFocus" Color="#66FFFFFF"/>
+    <v:SolidColorBrush x:Key="Color_WindowControlButtonsPressed" Color="#CCFFFFFF"/>
 
     <v:SolidColorBrush x:Key="Color_ProgramNameLaberForecolor" Color="White"/>
 
@@ -30,9 +31,9 @@
 
     <!--Timetable grid-->
     <v:SolidColorBrush x:Key="Color_DayNameForeground" Color="#fffffe"/>
-    <v:SolidColorBrush x:Key="Color_DayDateForeground" Color="#6e7379"/>
+    <v:SolidColorBrush x:Key="Color_DayDateForeground" Color="#c4c6ca"/>
 
-    <v:SolidColorBrush x:Key="Color_DaysColumnsBackground" Color="#1d2228"/>
+    <v:SolidColorBrush x:Key="Color_DaysColumnsBackground" Color="#181c26"/>
 
     
     <!--Timetable datagrid-->

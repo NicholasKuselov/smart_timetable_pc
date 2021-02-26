@@ -3,6 +3,8 @@
                     >
     
     <Style TargetType="{x:Type DataGridRow}" x:Key="MainTableRowStyle">
+        <Setter Property="Foreground" Value="{DynamicResource Color_RowHeaderForeground}"/>
+
         <Style.Triggers>
             <Trigger Property="ItemsControl.AlternationIndex" Value="0">
                 <Setter Property="Background" Value="{DynamicResource Color_FirstRowBackground}"></Setter>
@@ -39,6 +41,7 @@
 
     <Style TargetType="DataGridRow" x:Key="GroupDataGridRowStyle" >
         <Setter Property="Height" Value="105"></Setter>
+        <Setter Property="Foreground" Value="{DynamicResource Color_RowHeaderForeground}"/>
         <Style.Triggers>
             <Trigger Property="ItemsControl.AlternationIndex" Value="0">
                 <Setter Property="Background" Value="{DynamicResource Color_FirstRowBackground}"></Setter>
@@ -72,5 +75,9 @@
         <Setter Property="HorizontalGridLinesBrush" Value="{DynamicResource Color_ColumnBorder}"/>
         <Setter Property="VerticalGridLinesBrush" Value="{DynamicResource Color_ColumnBorder}"/>
         <Setter Property="ColumnHeaderStyle" Value="{DynamicResource GroupDataGridRowHeaderStyle}"/>
+    </Style>
+
+    <Style TargetType="DataGridCell" x:Key="CellStyle">
+        <Setter Property="Foreground" Value="{DynamicResource Color_RowHeaderForeground}"/>
     </Style>
 </ResourceDictionary>

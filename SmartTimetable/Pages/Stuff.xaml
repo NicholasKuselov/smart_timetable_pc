@@ -11,13 +11,32 @@
     <Page.DataContext>
         <viewmodels:StuffPageVM/>
     </Page.DataContext>
+    <Page.Resources>
+        <ResourceDictionary>
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/Templates/StuffAndSubjectsDataGridStyle.xaml"/>
+                <ResourceDictionary Source="/Resources/Templates/TimetableToolBarControls.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
     <Grid>
-        <DockPanel>
-        <DataGrid DockPanel.Dock="Top" Background="White" Name="DG_Timetable" AutoGenerateColumns="True" ItemsSource="{Binding ts}" Height="394">
-            
-            
-        </DataGrid>
-        <Button Content="hello" DockPanel.Dock="Bottom" Width="100" Height="50" Command="{Binding testClick}"></Button>
-        </DockPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+            <StackPanel Grid.Row="0" Orientation="Horizontal" FlowDirection="LeftToRight" Background="{DynamicResource Color_WeekListPanel}">
+                <Button Width="25" Height="25" HorizontalAlignment="Left" Command="{Binding Save}" Template="{DynamicResource SaveButton}"/>
+            </StackPanel>
+
+        <DataGrid Grid.Row="1" Background="{DynamicResource Color_lb_Background}" Name="DG_Timetable" ItemsSource="{Binding ts}" Style="{DynamicResource DataGridStyle}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="{DynamicResource StuffName}" Binding="{Binding name}" Width="*"></DataGridTextColumn>
+                    <DataGridTextColumn Header="{DynamicResource StuffMail}" Binding="{Binding mail}" Width="*"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+
+       
     </Grid>
 </Page>
