@@ -28,22 +28,25 @@
     </Page.DataContext>
     <Grid>
         <DockPanel DockPanel.Dock="Bottom" Background="Brown">
-            <StackPanel CanHorizontallyScroll="False" DockPanel.Dock="Left" Width="{Binding WeekListWidth}" Name="stackPanel_WeeksList" Background="{DynamicResource Color_lb_Background}">
-
-                <Grid Width="{Binding WeekListWidth}" Height="30" Background="{DynamicResource Color_WeekListPanel}">
+            <Grid DockPanel.Dock="Left" Width="{Binding WeekListWidth}" Name="stackPanel_WeeksList" Background="{DynamicResource Color_lb_Background}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Width="{Binding WeekListWidth}" Grid.Row="0" Height="30" Background="{DynamicResource Color_WeekListPanel}">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="20"></ColumnDefinition>
                         <ColumnDefinition Width="*"></ColumnDefinition>
-                        
                     </Grid.ColumnDefinitions>
                     <Button Grid.Column="0" Background="Transparent" Command="{Binding ChangeWeekListWidth}" BorderThickness="0,0,0,0" Content="{DynamicResource lWeeksIco}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,0,0,0"/>
                     <Label Grid.Column="1" Content="{DynamicResource lWeeks}" HorizontalAlignment="Center" Foreground="{DynamicResource Color_lWeeks}" FontSize="14"/>
-
                 </Grid>
-                <ListBox HorizontalAlignment="Stretch" Visibility="{Binding WeekListVisability}" ItemsSource="{Binding weeks}" VerticalAlignment="Stretch" HorizontalContentAlignment="Stretch" ItemContainerStyle="{DynamicResource Lststyle}" Background="{DynamicResource Color_lb_Background}" BorderThickness="0,0,0,0" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectedItem="{Binding CurrentWeek}">
+                <ListBox HorizontalAlignment="Stretch" Grid.Row="1" Visibility="{Binding WeekListVisability}" ItemsSource="{Binding weeks}" VerticalAlignment="Stretch" HorizontalContentAlignment="Stretch" ItemContainerStyle="{DynamicResource Lststyle}" Background="{DynamicResource Color_lb_Background}" BorderThickness="0,0,0,0" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectedItem="{Binding CurrentWeek}">
 
                 </ListBox>
-            </StackPanel>
+                <Button Margin="5,5,5,5"  Height="30" Grid.Row="2" VerticalAlignment="Bottom" Command="{Binding OpenWeekCreateWindow}" Template="{DynamicResource WeekAddButton}"/>
+            </Grid>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="30"></RowDefinition>
@@ -117,7 +120,7 @@
                         <DataGrid Grid.Row="2" Grid.Column="1" ItemsSource="{Binding FirstDay}" Style="{DynamicResource TimetableDataGridStyle}" SelectionUnit="CellOrRowHeader" >
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="{DynamicResource Time}" Binding="{Binding Time}" Width="*"></DataGridTextColumn>
-                                <DataGridComboBoxColumn  Header="{DynamicResource Subject}" ItemsSource="{Binding Source={StaticResource subjects}}" SelectedItemBinding="{Binding Path=subject1}" DisplayMemberPath="name" Width="*">                                </DataGridComboBoxColumn>
+                                <DataGridComboBoxColumn  Header="{DynamicResource Subject}" ItemsSource="{Binding Source={StaticResource subjects}}" SelectedItemBinding="{Binding Path=subject1}" DisplayMemberPath="name" Width="*"></DataGridComboBoxColumn>
                                 <DataGridComboBoxColumn  Header="{DynamicResource Teacher}" ItemsSource="{Binding Source={StaticResource teachers}}" SelectedItemBinding="{Binding Path=teacher1}" DisplayMemberPath="name" Width="*"></DataGridComboBoxColumn>
                             </DataGrid.Columns>
                         </DataGrid>

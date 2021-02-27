@@ -1,0 +1,27 @@
+﻿<Window x:Class="SmartTimetable.Windows.WeekCreateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SmartTimetable.Windows" xmlns:viewmodels="clr-namespace:SmartTimetable.ViewModels"
+        mc:Ignorable="d"
+        Title="WeekCreateWindow" Height="150" Width="300" ResizeMode="NoResize">
+    <Window.DataContext>
+        <viewmodels:WeekCreateWindowVM></viewmodels:WeekCreateWindowVM>
+    </Window.DataContext>
+
+    <Window.Resources>
+        <Style x:Key="ttt" TargetType="Calendar">
+            <Setter Property="SelectionMode" Value="SingleDate" />
+            <Setter Property="DisplayMode" Value="Decade" />
+            <Setter Property="DisplayDate" Value="" />
+        </Style>
+    </Window.Resources>
+    <Grid>
+        
+        <DatePicker HorizontalAlignment="Center" CalendarStyle="{StaticResource ttt}"  VerticalAlignment="Center" SelectedDate="{Binding dateFrom}" IsTodayHighlighted="True" FirstDayOfWeek="Monday"></DatePicker>
+        <Button Content="{DynamicResource bAdd}" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,10" Width="75" Command="{Binding AddWeek}"/>
+        <Label Content="{DynamicResource WeekAddingDesc}"  VerticalAlignment="Top" HorizontalAlignment="Center"/>
+
+    </Grid>
+</Window>

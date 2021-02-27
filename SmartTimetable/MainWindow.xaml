@@ -13,7 +13,7 @@
         <Style TargetType="{x:Type Window}">
             <Setter Property="shell:WindowChrome.WindowChrome">
                 <Setter.Value>
-                    <shell:WindowChrome CaptionHeight="15"
+                    <shell:WindowChrome CaptionHeight="0"
                                         CornerRadius="0"
                                         GlassFrameThickness="0,0,0,0"
                                         NonClientFrameEdges="None"

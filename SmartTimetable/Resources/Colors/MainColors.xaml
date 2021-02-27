@@ -28,6 +28,11 @@
 
     <Color x:Key="SelectedBackgroundColor">#FFC5CBF9</Color>
     <Color x:Key="SelectedUnfocusedColor">#FFDDDDDD</Color>
+    
+    <v:SolidColorBrush x:Key="Color_AddWeekButtonBackground" Color="#ffda82"/>
+    <v:SolidColorBrush x:Key="Color_AddWeekButtonBackgroundFocus" Color="#f0ce7d"/>
+    <v:SolidColorBrush x:Key="Color_AddWeekButtonBackgroundPressed" Color="#dcbe76"/>
+    <v:SolidColorBrush x:Key="Color_AddWeekButtonForeground" Color="#181c26"/>
 
     <!--Timetable grid-->
     <v:SolidColorBrush x:Key="Color_DayNameForeground" Color="#fffffe"/>

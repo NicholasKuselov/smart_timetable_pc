@@ -9,7 +9,12 @@
     <v:String x:Key="bTimetable">Расписание</v:String>
     <v:String x:Key="bSubjects">Дисциплины</v:String>
     <v:String x:Key="bTeachers">Преподователи</v:String>
-    
+
+    <!--WeekCreate Window-->
+    <v:String x:Key="WeekAddingDesc">Выберите понедельник нужной недели</v:String>
+    <v:String x:Key="bAdd">Добавить</v:String>
+    <v:String x:Key="bCancel">Отмена</v:String>
+
     <!--Timetable page-->
     <v:String x:Key="lWeeks">Недели</v:String>
     <v:String x:Key="bAddWeek">Добавить</v:String>
@@ -31,6 +36,9 @@
     <!--Stuff DataGrid-->
     <v:String x:Key="StuffName">ФИО</v:String>
     <v:String x:Key="StuffMail">Почта</v:String>
+
+    <!--Subjects DataGrid-->
+    <v:String x:Key="SubjectName">Дисциплина</v:String>
 
 
 

@@ -11,6 +11,10 @@ namespace SmartTimetable.Models
     {
         public static EDM_SmartTimetableDB timetableDB =new EDM_SmartTimetableDB() ;
 
+        public static void UpdateDB() //try catch
+        {
+            timetableDB.SaveChanges();
+        }
         
         public static IEnumerable<Week> GetWeeks()
         {

@@ -2,6 +2,7 @@
 using GalaSoft.MvvmLight.Command;
 using SmartTimetable.Models;
 using SmartTimetable.Pages;
+using SmartTimetable.Windows;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -19,6 +20,8 @@ namespace SmartTimetable.ViewModels
     class TimetableWindowViewModel : ViewModelBase
     {
         //Propertys
+        private Window weekCreateWindow;
+
         public Visibility WeekListVisability { get; set; } = Visibility.Visible;
 
         private week _CurrentWeek;
@@ -103,6 +106,17 @@ namespace SmartTimetable.ViewModels
                 });
             }
         }
+        public ICommand OpenWeekCreateWindow
+        {
+            get
+            {
+                return new RelayCommand(() =>
+                {
+                    weekCreateWindow = new WeekCreateWindow();
+                    weekCreateWindow.Show();
+                });
+            }
+        }
 
         //Methods
         private void InitTable() //Вызывается при изменении выбранной недели или при запуске программы
@@ -123,7 +137,7 @@ namespace SmartTimetable.ViewModels
             courses = DataBase.timetableDB.course.Local.ToBindingList();
             subjects = DataBase.timetableDB.subject.Local.ToBindingList();
 
-            if(CurrentWeek == null) CurrentWeek = weeks[0];
+            if(CurrentWeek == null) CurrentWeek = weeks[0]; //ssssssssssssssssssssssssssssssssssssssssssssssssssssss
            
             currentWeekTimetable = new BindingList<timetable>(timetables.Where(p => p.Week == currentWeekId).ToList<timetable>());
       

@@ -92,7 +92,15 @@ namespace SmartTimetable.ViewModels
             {
                 return new RelayCommand(() =>
                 {
-                    Application.Current.MainWindow.WindowState = WindowState.Maximized;
+                    if(Application.Current.MainWindow.WindowState == WindowState.Maximized)
+                    {
+                        Application.Current.MainWindow.WindowState = WindowState.Normal;
+                    }
+                    else
+                    {
+                        Application.Current.MainWindow.WindowState = WindowState.Maximized;
+                    }
+
                 });
             }
         }

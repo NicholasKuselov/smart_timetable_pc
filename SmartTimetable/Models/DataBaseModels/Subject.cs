@@ -19,7 +19,7 @@ namespace SmartTimetable
         public int idsubject { get; set; }
 
         [Required]
-        [StringLength(45)]
+        [StringLength(150)]
         public string name { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
