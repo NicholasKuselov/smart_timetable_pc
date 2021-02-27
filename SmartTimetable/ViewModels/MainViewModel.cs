@@ -19,6 +19,8 @@ namespace SmartTimetable.ViewModels
         private Page Timetable;
         private Page Stuff;
         private Page Subject;
+        private Page Group;
+        private Page Course;
 
         public Page CurrentPage { get; set; }
 
@@ -29,6 +31,8 @@ namespace SmartTimetable.ViewModels
             Timetable = new Pages.Timetable();
             Stuff = new Pages.Stuff();
             Subject = new Pages.Subjects();
+            Group = new Pages.Group();
+            Course = new Pages.Course();
 
             CurrentPage = Timetable;
         }
@@ -42,6 +46,34 @@ namespace SmartTimetable.ViewModels
                     if (CurrentPage != Stuff)
                     {
                         CurrentPage = Stuff;
+                    }
+                });
+            }
+        }
+
+        public ICommand GoToGroupPage
+        {
+            get
+            {
+                return new RelayCommand(() =>
+                {
+                    if (CurrentPage != Group)
+                    {
+                        CurrentPage = Group;
+                    }
+                });
+            }
+        }
+
+        public ICommand GoToCoursePage
+        {
+            get
+            {
+                return new RelayCommand(() =>
+                {
+                    if (CurrentPage != Course)
+                    {
+                        CurrentPage = Course;
                     }
                 });
             }

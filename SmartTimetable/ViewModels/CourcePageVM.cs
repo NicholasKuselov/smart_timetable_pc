@@ -12,16 +12,15 @@ using System.Windows.Input;
 
 namespace SmartTimetable.ViewModels
 {
-    class GroupPageVM : ViewModelBase
+    class CoursePageVM : ViewModelBase
     {
-        public BindingList<group> groups { get; set; }
+        public BindingList<course> courses { get; set; }
 
 
-        public GroupPageVM()
+        public CoursePageVM()
         {
-            DataBase.timetableDB.group.Load();
-            groups = DataBase.timetableDB.group.Local.ToBindingList();
-    
+            DataBase.timetableDB.course.Load();
+            courses = DataBase.timetableDB.course.Local.ToBindingList();    
         }
 
         public ICommand Save

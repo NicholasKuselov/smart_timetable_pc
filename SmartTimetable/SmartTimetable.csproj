@@ -144,6 +144,12 @@
     <Compile Include="Models\LessonTimeModel.cs" />
     <Compile Include="Models\Week.cs" />
     <Compile Include="Models\WeekDate.cs" />
+    <Compile Include="Pages\Course.xaml.cs">
+      <DependentUpon>Course.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Group.xaml.cs">
+      <DependentUpon>Group.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Stuff.xaml.cs">
       <DependentUpon>Stuff.xaml</DependentUpon>
     </Compile>
@@ -160,6 +166,8 @@
     <Compile Include="Pages\TinetableCreationStage.xaml.cs">
       <DependentUpon>TinetableCreationStage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\CourcePageVM.cs" />
+    <Compile Include="ViewModels\GroupPageVM.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\StuffPageVM.cs" />
     <Compile Include="ViewModels\SubjectPageVM.cs" />
@@ -181,6 +189,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\Course.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Group.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Stuff.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

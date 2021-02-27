@@ -78,3 +78,7 @@ C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Resources\Tem
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\SmartTimetable.csprojAssemblyReference.cache
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Windows\WeekCreateWindow.g.cs
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Windows\WeekCreateWindow.baml
+C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Pages\Course.g.cs
+C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Pages\Group.g.cs
+C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Pages\Course.baml
+C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Pages\Group.baml

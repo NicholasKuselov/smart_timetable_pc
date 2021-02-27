@@ -9,6 +9,8 @@
     <v:String x:Key="bTimetable">Расписание</v:String>
     <v:String x:Key="bSubjects">Дисциплины</v:String>
     <v:String x:Key="bTeachers">Преподователи</v:String>
+    <v:String x:Key="bGroups">Группы</v:String>
+    <v:String x:Key="bCourses">Курсы</v:String>
 
     <!--WeekCreate Window-->
     <v:String x:Key="WeekAddingDesc">Выберите понедельник нужной недели</v:String>
@@ -18,6 +20,14 @@
     <!--Timetable page-->
     <v:String x:Key="lWeeks">Недели</v:String>
     <v:String x:Key="bAddWeek">Добавить</v:String>
+
+    <!--Group page-->
+    <v:String x:Key="lGroup">Группа</v:String>
+
+
+    <!--Course page-->
+    <v:String x:Key="lCourse">Курс №</v:String>
+
 
     <!--Days-->
     <v:String x:Key="FirstDay">Понедельник</v:String>
