@@ -40,6 +40,7 @@ namespace SmartTimetable.ViewModels
         public int WeekListWidth { get; set; } = (int)WeekListWidthState.Open;
         public Page page { get; set; }
         public BindingList<group> groups { get; set; }
+        public BindingList<day> dbDays { get; set; }
         public BindingList<course> courses { get; set; }
         public BindingList<timetable> timetables { get; set; }
         public BindingList<teacher> teachers { get; set; }
@@ -129,7 +130,9 @@ namespace SmartTimetable.ViewModels
             DataBase.timetableDB.group.Load();
             DataBase.timetableDB.course.Load();
             DataBase.timetableDB.subject.Load();
+            DataBase.timetableDB.day.Load();
 
+            dbDays = DataBase.timetableDB.day.Local.ToBindingList();
             groups = DataBase.timetableDB.group.Local.ToBindingList();
             weeks = DataBase.timetableDB.week.Local.ToBindingList();
             teachers = DataBase.timetableDB.teacher.Local.ToBindingList();
@@ -180,7 +183,7 @@ namespace SmartTimetable.ViewModels
                             {                              
                                 tt = new timetable();
                                 tt.Date = date.AddDays(i).ToShortDateString();
-                                tt.Day = i + 1;
+                                tt.Day = dbDays[i].idDay;
                                 tt.Week = currentWeekId;
                                 tt.Group = f_group.idgroup;
                                 tt.Course = f_course.idcourse;
@@ -201,7 +204,8 @@ namespace SmartTimetable.ViewModels
                 {
                     if (Days[i][j].teacher1 != null && Days[i][j].subject1 != null && !timetables.Contains(Days[i][j]))
                     {
-                        Days[i][j].idtimetable = timetables[timetables.Count - 1].idtimetable+1;
+                        if(timetables.Count>0) Days[i][j].idtimetable = timetables[timetables.Count - 1].idtimetable + 1;
+                        else Days[i][j].idtimetable = 1;
                         timetables.Add(Days[i][j]);
                     }
                   //  else if (Days[i][j].teacher1 == null && Days[i][j].subject1 == null && timetables.Contains(Days[i][j]))

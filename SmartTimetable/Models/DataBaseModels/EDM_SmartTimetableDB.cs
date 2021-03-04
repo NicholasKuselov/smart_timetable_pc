@@ -8,7 +8,7 @@ namespace SmartTimetable
     public partial class EDM_SmartTimetableDB : DbContext
     {
         public EDM_SmartTimetableDB()
-            : base("name=EDM_SmartTimetableDB")
+            : base("name=testcon")
         {
             
         }
