@@ -119,7 +119,7 @@
 
                         <DataGrid Grid.Row="2" Grid.Column="1" ItemsSource="{Binding FirstDay}" Style="{DynamicResource TimetableDataGridStyle}" SelectionUnit="CellOrRowHeader" >
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="{DynamicResource Time}" Binding="{Binding Time}" Width="*"></DataGridTextColumn>
+                                <DataGridTextColumn Header="{DynamicResource Time}" Binding="{Binding GetTime}" Width="*"></DataGridTextColumn>
                                 <DataGridComboBoxColumn  Header="{DynamicResource Subject}" ItemsSource="{Binding Source={StaticResource subjects}}" SelectedItemBinding="{Binding Path=subject1}" DisplayMemberPath="name" Width="*"></DataGridComboBoxColumn>
                                 <DataGridComboBoxColumn  Header="{DynamicResource Teacher}" ItemsSource="{Binding Source={StaticResource teachers}}" SelectedItemBinding="{Binding Path=teacher1}" DisplayMemberPath="name" Width="*"></DataGridComboBoxColumn>
                             </DataGrid.Columns>
@@ -127,7 +127,7 @@
 
                         <DataGrid Grid.Row="2" Grid.Column="2" ItemsSource="{Binding SecondDay}" Style="{DynamicResource TimetableDataGridStyle}">
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="{DynamicResource Time}" Binding="{Binding Time}" Width="*"></DataGridTextColumn>
+                                <DataGridTextColumn Header="{DynamicResource Time}" Binding="{Binding GetTime}" Width="*"></DataGridTextColumn>
                                 <DataGridComboBoxColumn  Header="{DynamicResource Subject}" ItemsSource="{Binding Source={StaticResource subjects}}" SelectedItemBinding="{Binding Path=subject1}" DisplayMemberPath="name" Width="*"></DataGridComboBoxColumn>
                                 <DataGridComboBoxColumn  Header="{DynamicResource Teacher}" ItemsSource="{Binding Source={StaticResource teachers}}" SelectedItemBinding="{Binding Path=teacher1}" DisplayMemberPath="name" Width="*"></DataGridComboBoxColumn>
                             </DataGrid.Columns>
@@ -135,7 +135,7 @@
 
                         <DataGrid Grid.Row="2" Grid.Column="3" ItemsSource="{Binding ThirdDay}" Style="{DynamicResource TimetableDataGridStyle}">
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="{DynamicResource Time}" Binding="{Binding Time}" Width="*"></DataGridTextColumn>
+                                <DataGridTextColumn Header="{DynamicResource Time}" Binding="{Binding GetTime}" Width="*"></DataGridTextColumn>
                                 <DataGridComboBoxColumn  Header="{DynamicResource Subject}" ItemsSource="{Binding Source={StaticResource subjects}}" SelectedItemBinding="{Binding Path=subject1}" DisplayMemberPath="name" Width="*"></DataGridComboBoxColumn>
                                 <DataGridComboBoxColumn  Header="{DynamicResource Teacher}" ItemsSource="{Binding Source={StaticResource teachers}}" SelectedItemBinding="{Binding Path=teacher1}" DisplayMemberPath="name" Width="*"></DataGridComboBoxColumn>
                             </DataGrid.Columns>
@@ -143,7 +143,7 @@
 
                         <DataGrid Grid.Row="2" Grid.Column="4" ItemsSource="{Binding FourthDay}" Style="{DynamicResource TimetableDataGridStyle}">
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="{DynamicResource Time}" Binding="{Binding Time}" Width="*"></DataGridTextColumn>
+                                <DataGridTextColumn Header="{DynamicResource Time}" Binding="{Binding GetTime}" Width="*"></DataGridTextColumn>
                                 <DataGridComboBoxColumn  Header="{DynamicResource Subject}" ItemsSource="{Binding Source={StaticResource subjects}}" SelectedItemBinding="{Binding Path=subject1}" DisplayMemberPath="name" Width="*"></DataGridComboBoxColumn>
                                 <DataGridComboBoxColumn  Header="{DynamicResource Teacher}" ItemsSource="{Binding Source={StaticResource teachers}}" SelectedItemBinding="{Binding Path=teacher1}" DisplayMemberPath="name" Width="*"></DataGridComboBoxColumn>
                             </DataGrid.Columns>
@@ -151,7 +151,7 @@
 
                         <DataGrid Grid.Row="2" Grid.Column="5" ItemsSource="{Binding FifthDay}" Style="{DynamicResource TimetableDataGridStyle}">
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="{DynamicResource Time}" Binding="{Binding Time}" Width="*"></DataGridTextColumn>
+                                <DataGridTextColumn Header="{DynamicResource Time}" Binding="{Binding GetTime}" Width="*"></DataGridTextColumn>
                                 <DataGridComboBoxColumn  Header="{DynamicResource Subject}" ItemsSource="{Binding Source={StaticResource subjects}}" SelectedItemBinding="{Binding Path=subject1}" DisplayMemberPath="name" Width="*"></DataGridComboBoxColumn>
                                 <DataGridComboBoxColumn  Header="{DynamicResource Teacher}" ItemsSource="{Binding Source={StaticResource teachers}}" SelectedItemBinding="{Binding Path=teacher1}" DisplayMemberPath="name" Width="*"></DataGridComboBoxColumn>
                             </DataGrid.Columns>
@@ -159,7 +159,7 @@
 
                         <DataGrid Grid.Row="2" Grid.Column="6" ItemsSource="{Binding SixthDay}" Style="{DynamicResource TimetableDataGridStyle}">
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="{DynamicResource Time}" Binding="{Binding Time}" Width="*"></DataGridTextColumn>
+                                <DataGridTextColumn Header="{DynamicResource Time}" Binding="{Binding GetTime}" Width="*"></DataGridTextColumn>
                                 <DataGridComboBoxColumn  Header="{DynamicResource Subject}" ItemsSource="{Binding Source={StaticResource subjects}}" SelectedItemBinding="{Binding Path=subject1}" DisplayMemberPath="name" Width="*"></DataGridComboBoxColumn>
                                 <DataGridComboBoxColumn  Header="{DynamicResource Teacher}" ItemsSource="{Binding Source={StaticResource teachers}}" SelectedItemBinding="{Binding Path=teacher1}" DisplayMemberPath="name" Width="*"></DataGridComboBoxColumn>
                             </DataGrid.Columns>

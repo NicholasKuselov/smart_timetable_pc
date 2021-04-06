@@ -1,6 +1,7 @@
 ﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using SmartTimetable.Models;
+using SmartTimetable.Models.DataBaseModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

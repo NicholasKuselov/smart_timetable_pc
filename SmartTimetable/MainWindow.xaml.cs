@@ -1,4 +1,5 @@
-﻿using SmartTimetable.ViewModels;
+﻿using SmartTimetable.Controllers;
+using SmartTimetable.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,9 +27,11 @@ namespace SmartTimetable
             InitializeComponent();
             this.MouseLeftButtonDown += delegate { this.DragMove(); };
             DataContext = new MainViewModel();
-            
-
-
+            this.SourceInitialized += new EventHandler(Window1_SourceInitialized);
+        }
+        void Window1_SourceInitialized(object sender, EventArgs e)
+        {
+            WindowSizing.WindowInitialized(this);
         }
     }
 }

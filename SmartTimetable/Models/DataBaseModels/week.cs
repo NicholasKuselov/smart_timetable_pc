@@ -1,4 +1,4 @@
-namespace SmartTimetable
+namespace SmartTimetable.Models.DataBaseModels
 {
     using System;
     using System.Collections.Generic;
@@ -29,9 +29,9 @@ namespace SmartTimetable
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<timetable> timetable { get; set; }
 
-        public string GetWeek
+        public string GetWeek{get
         {
-            get { return dateFrom + " - " + dateTo; }
-        }
+            return dateFrom + " - " + dateTo;
+        } }
     }
 }

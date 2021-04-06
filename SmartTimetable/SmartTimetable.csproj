@@ -135,11 +135,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controllers\WindowSizing.cs" />
     <Compile Include="Models\DataBaseModels\course.cs" />
+    <Compile Include="Models\DataBaseModels\dates.cs" />
     <Compile Include="Models\DataBaseModels\day.cs" />
-    <Compile Include="Models\DataBaseModels\EDM_SmartTimetableDB.cs" />
     <Compile Include="Models\DataBaseModels\group.cs" />
     <Compile Include="Models\DataBase.cs" />
+    <Compile Include="Models\DataBaseModels\SmartTimetableDBContext.cs" />
+    <Compile Include="Models\DataBaseModels\times.cs" />
     <Compile Include="Models\LessonsTime.cs" />
     <Compile Include="Models\LessonTimeModel.cs" />
     <Compile Include="Models\Week.cs" />

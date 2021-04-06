@@ -3,31 +3,42 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
 
-namespace SmartTimetable
+namespace SmartTimetable.Models.DataBaseModels
 {
-    public partial class EDM_SmartTimetableDB : DbContext
+    public partial class SmartTimetableDBContext : DbContext
     {
-        public EDM_SmartTimetableDB()
-            : base("name=testcon")
+        public SmartTimetableDBContext()
+            : base("name=SmartTimetableDBContext")
         {
-            
         }
 
         public virtual DbSet<course> course { get; set; }
+        public virtual DbSet<dates> dates { get; set; }
         public virtual DbSet<day> day { get; set; }
         public virtual DbSet<group> group { get; set; }
         public virtual DbSet<subject> subject { get; set; }
         public virtual DbSet<teacher> teacher { get; set; }
+        public virtual DbSet<times> times { get; set; }
         public virtual DbSet<timetable> timetable { get; set; }
         public virtual DbSet<users> users { get; set; }
         public virtual DbSet<week> week { get; set; }
- 
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<course>()
                 .HasMany(e => e.timetable)
                 .WithRequired(e => e.course1)
                 .HasForeignKey(e => e.Course)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<dates>()
+                .Property(e => e.date)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<dates>()
+                .HasMany(e => e.timetable)
+                .WithRequired(e => e.dates)
+                .HasForeignKey(e => e.Date)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<day>()
@@ -74,13 +85,19 @@ namespace SmartTimetable
                 .HasForeignKey(e => e.Teacher)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<timetable>()
-                .Property(e => e.Date)
+            modelBuilder.Entity<times>()
+                .Property(e => e.timeFrom)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<timetable>()
-                .Property(e => e.Time)
+            modelBuilder.Entity<times>()
+                .Property(e => e.timeTo)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<times>()
+                .HasMany(e => e.timetable)
+                .WithRequired(e => e.times)
+                .HasForeignKey(e => e.Time)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<users>()
                 .Property(e => e.login)

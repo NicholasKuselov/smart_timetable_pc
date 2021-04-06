@@ -1,4 +1,4 @@
-namespace SmartTimetable
+namespace SmartTimetable.Models.DataBaseModels
 {
     using System;
     using System.Collections.Generic;
@@ -16,7 +16,6 @@ namespace SmartTimetable
         }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int idcourse { get; set; }
 
         public int number { get; set; }

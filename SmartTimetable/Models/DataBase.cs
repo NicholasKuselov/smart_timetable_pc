@@ -1,4 +1,5 @@
 ﻿using GalaSoft.MvvmLight;
+using SmartTimetable.Models.DataBaseModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace SmartTimetable.Models
 {
     static class DataBase
     {
-        public static EDM_SmartTimetableDB timetableDB =new EDM_SmartTimetableDB() ;
+        public static SmartTimetableDBContext timetableDB = new SmartTimetableDBContext() ;
 
         public static void UpdateDB() //try catch
         {

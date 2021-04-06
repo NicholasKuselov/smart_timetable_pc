@@ -75,7 +75,6 @@ C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Pages\Tinetab
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Resources\Templates\TimetableDataGridStyles.baml
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Resources\Templates\TimetableToolBarControls.baml
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Resources\Templates\StuffAndSubjectsDataGridStyle.baml
-C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\SmartTimetable.csprojAssemblyReference.cache
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Windows\WeekCreateWindow.g.cs
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Windows\WeekCreateWindow.baml
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Pages\Course.g.cs

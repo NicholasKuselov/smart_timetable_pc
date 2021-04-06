@@ -15,6 +15,16 @@ namespace SmartTimetable.Models
         public string FifthDay { get; set; }
         public string SixthDay { get; set; }
 
+        public WeekDate(DateTime date)
+        {
+            FirstDay = date.ToShortDateString();
+            SecondDay = date.AddDays(1).ToShortDateString();
+            ThirdDay = date.AddDays(2).ToShortDateString();
+            FourthDay = date.AddDays(3).ToShortDateString();
+            FifthDay = date.AddDays(4).ToShortDateString();
+            SixthDay = date.AddDays(5).ToShortDateString();
+        }
+
         public void CreateDate(DateTime date)
         {
             FirstDay = date.ToShortDateString();

@@ -1,4 +1,4 @@
-namespace SmartTimetable
+namespace SmartTimetable.Models.DataBaseModels
 {
     using System;
     using System.Collections.Generic;

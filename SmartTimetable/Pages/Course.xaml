@@ -27,7 +27,7 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Orientation="Horizontal" FlowDirection="LeftToRight" Background="{DynamicResource Color_WeekListPanel}">
-            <Button Width="25" Height="25" HorizontalAlignment="Left" Command="{Binding Save}" Template="{DynamicResource SaveButton}"/>
+            <Button Width="25" Height="25" HorizontalAlignment="Left" Command="{Binding Save}" Template="{DynamicResource SaveCourseButton}"/>
         </StackPanel>
 
         <DataGrid Grid.Row="1" Background="{DynamicResource Color_lb_Background}" Name="DG_Timetable" ItemsSource="{Binding courses}" Style="{DynamicResource DataGridStyle}">
