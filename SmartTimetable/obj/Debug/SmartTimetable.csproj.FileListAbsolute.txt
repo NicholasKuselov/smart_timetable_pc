@@ -81,3 +81,4 @@ C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Pages\Course.
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Pages\Group.g.cs
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Pages\Course.baml
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Pages\Group.baml
+C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\SmartTimetable.csprojAssemblyReference.cache

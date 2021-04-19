@@ -8,7 +8,7 @@ namespace SmartTimetable.Models.DataBaseModels
     public partial class SmartTimetableDBContext : DbContext
     {
         public SmartTimetableDBContext()
-            : base("name=SmartTimetableDBContext")
+            : base("name=Server")
         {
         }
 

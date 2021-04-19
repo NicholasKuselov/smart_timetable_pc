@@ -214,7 +214,7 @@ namespace SmartTimetable.ViewModels
  
 
 
-                            timetable tt = CheckLesson(currentWeekTimetable.ToList<timetable>(), currentDateId, f_Time.idtimes, i + 1, f_course.idcourse, f_group.idgroup);
+                            timetable tt = CheckLesson(currentWeekTimetable.ToList<timetable>(), currentDateId, f_Time.idtimes, dbDays[i].idDay, f_course.idcourse, f_group.idgroup);
 
                             if (tt == null)
                             {                              
