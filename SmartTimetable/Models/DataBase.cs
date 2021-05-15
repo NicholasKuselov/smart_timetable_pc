@@ -1,4 +1,5 @@
 ﻿using GalaSoft.MvvmLight;
+using SmartTimetable.Controllers;
 using SmartTimetable.Models.DataBaseModels;
 using System;
 using System.Collections.Generic;
@@ -10,33 +11,30 @@ namespace SmartTimetable.Models
 {
     static class DataBase
     {
-        public static SmartTimetableDBContext timetableDB = new SmartTimetableDBContext() ;
+        public static SmartTimetableDBContext timetableDB = new SmartTimetableDBContext();
+
+        public static void Init()
+        {
+            timetableDB = new SmartTimetableDBContext();
+        }
 
         public static void UpdateDB() //try catch
         {
             timetableDB.SaveChanges();
         }
         
-        public static IEnumerable<Week> GetWeeks()
+        public static bool Auth(string login,string passHex)
         {
-            return new Week[]
+            users[] us = DataBase.timetableDB.users.Where(p => p.login == login).Where(p => p.password == passHex).ToArray();
+            if (us.Length > 0)
             {
-                new Week
-                {
-                    From = "10.11",
-                    To = "17.11"
-                },
-                new Week
-                {
-                    From = "22.11",
-                    To = "29.11"
-                },
-                new Week
-                {
-                    From = "2.12",
-                    To = "9.12"
-                },
-            };
+                Setting.currentUser = us[0];
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

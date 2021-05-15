@@ -135,6 +135,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controllers\ErrorHandler.cs" />
+    <Compile Include="Controllers\Setting.cs" />
     <Compile Include="Controllers\WindowSizing.cs" />
     <Compile Include="Models\DataBaseModels\course.cs" />
     <Compile Include="Models\DataBaseModels\dates.cs" />
@@ -170,6 +172,7 @@
       <DependentUpon>TinetableCreationStage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\CourcePageVM.cs" />
+    <Compile Include="ViewModels\EntryWindowVM.cs" />
     <Compile Include="ViewModels\GroupPageVM.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\StuffPageVM.cs" />
@@ -177,10 +180,29 @@
     <Compile Include="ViewModels\TimetableWindowViewModel.cs" />
     <Compile Include="Models\DataBaseModels\week.cs" />
     <Compile Include="ViewModels\WeekCreateWindowVM.cs" />
+    <Compile Include="Windows\EntryWindow.xaml.cs">
+      <DependentUpon>EntryWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\WeekCreateWindow.xaml.cs">
       <DependentUpon>WeekCreateWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Resources\Templates\EntryWindow\EntryWindowButtons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Templates\EntryWindow\EntryWindowControlButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Templates\EntryWindow\EntryWindowTextBoxStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\EntryWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -188,7 +210,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
@@ -236,23 +258,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Resources\Templates\StuffAndSubjectsDataGridStyle.xaml">
+    <Page Include="Resources\Templates\MainWindow\StuffAndSubjectsDataGridStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Resources\Templates\TimetableDataGridStyles.xaml">
+    <Page Include="Resources\Templates\MainWindow\TimetableDataGridStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Resources\Templates\TimetableToolBarControls.xaml">
+    <Page Include="Resources\Templates\MainWindow\TimetableToolBarControls.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Resources\Templates\WeekListButtons.xaml">
+    <Page Include="Resources\Templates\MainWindow\WeekListButtons.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Resources\Templates\WindowControlButtons.xaml">
+    <Page Include="Resources\Templates\MainWindow\WindowControlButtons.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -279,6 +301,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

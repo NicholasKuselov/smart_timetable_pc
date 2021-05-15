@@ -15,8 +15,8 @@
         <ResourceDictionary>
 
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Resources/Templates/StuffAndSubjectsDataGridStyle.xaml"/>
-                <ResourceDictionary Source="/Resources/Templates/TimetableToolBarControls.xaml"/>
+                <ResourceDictionary Source="/Resources/Templates/MainWindow/StuffAndSubjectsDataGridStyle.xaml"/>
+                <ResourceDictionary Source="/Resources/Templates/MainWindow/TimetableToolBarControls.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Page.Resources>
@@ -32,7 +32,7 @@
 
         <DataGrid Grid.Row="1" Background="{DynamicResource Color_lb_Background}" Name="DG_Timetable" ItemsSource="{Binding ts}" Style="{DynamicResource DataGridStyle}">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="{DynamicResource StuffName}" Binding="{Binding name}" Width="*"></DataGridTextColumn>
+                    <DataGridTextColumn Header="{DynamicResource StuffName}" Binding="{Binding name}" Width="*" ></DataGridTextColumn>
                     <DataGridTextColumn Header="{DynamicResource StuffMail}" Binding="{Binding mail}" Width="*"></DataGridTextColumn>
                 </DataGrid.Columns>
             </DataGrid>

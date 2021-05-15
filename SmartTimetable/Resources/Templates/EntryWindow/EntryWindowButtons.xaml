@@ -1,0 +1,36 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:SmartTimetable.Resources.Templates.EntryWindow">
+
+    <ControlTemplate x:Key="AuthButton" TargetType="{x:Type Button}">
+        <Border Name="border" Background="{DynamicResource Color_AuthButtonBackground}" CornerRadius="4">
+            <Grid>
+                <Label Content="{DynamicResource bAuth}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource Color_MainWindow}"></Label>
+            </Grid>
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="border" Property="Background" Value="{DynamicResource ResourceKey=Color_AuthButtonBackgroundFocus}"></Setter>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter TargetName="border" Property="Background" Value="{DynamicResource ResourceKey=Color_AuthButtonBackgroundPress}"></Setter>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="ForgotPasswordButton" TargetType="{x:Type Button}">
+        <Border Name="border" Background="Transparent" CornerRadius="4">
+            <Grid>
+                <Label Content="{DynamicResource bForgotPass}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"></Label>
+            </Grid>
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="border" Property="Background" Value="{DynamicResource ResourceKey=Color_AddWeekButtonBackgroundFocus}"></Setter>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter TargetName="border" Property="Background" Value="{DynamicResource ResourceKey=Color_AddWeekButtonBackgroundPressed}"></Setter>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+</ResourceDictionary>

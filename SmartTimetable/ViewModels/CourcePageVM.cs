@@ -9,6 +9,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace SmartTimetable.ViewModels
@@ -21,8 +22,13 @@ namespace SmartTimetable.ViewModels
         public CoursePageVM()
         {
             DataBase.timetableDB.course.Load();
-            courses = DataBase.timetableDB.course.Local.ToBindingList();    
+            courses = DataBase.timetableDB.course.Local.ToBindingList();
+
         }
+
+
+
+
 
         public ICommand Save
         {
@@ -30,8 +36,17 @@ namespace SmartTimetable.ViewModels
             {
                 return new RelayCommand(() =>
                 {
+                    CheckListForNull();
                     DataBase.UpdateDB();
                 });
+            }
+        }
+
+        private void CheckListForNull()
+        {
+            for (int i = 0; i < courses.Count; i++)
+            {
+                if (courses[i] == null) courses.RemoveAt(i);
             }
         }
     }

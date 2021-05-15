@@ -139,6 +139,7 @@ namespace SmartTimetable.ViewModels
             DataBase.timetableDB.dates.Load();
             DataBase.timetableDB.times.Load();
 
+
             dbDays = DataBase.timetableDB.day.Local.ToBindingList();
             groups = DataBase.timetableDB.group.Local.ToBindingList();
             weeks = DataBase.timetableDB.week.Local.ToBindingList();

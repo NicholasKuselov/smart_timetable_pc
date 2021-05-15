@@ -48,4 +48,11 @@
     <v:SolidColorBrush x:Key="Color_RowHeaderBackground" Color="#1f272a"/>
     <v:SolidColorBrush x:Key="Color_RowHeaderForeground" Color="#c4c6ca"/>
 
+    <!--Entry window--> 
+    <v:SolidColorBrush x:Key="Color_AuthButtonBackground" Color="#febd01"/>
+    <v:SolidColorBrush x:Key="Color_AuthButtonBackgroundFocus" Color="#fffb00"/>
+    <v:SolidColorBrush x:Key="Color_AuthButtonBackgroundPress" Color="#febd01"/>
+    <v:SolidColorBrush x:Key="Color_ForgotPassButton" Color="#454e55"/>
+    
+
 </ResourceDictionary>

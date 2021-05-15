@@ -14,8 +14,8 @@
         <ResourceDictionary>
 
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Resources/Templates/StuffAndSubjectsDataGridStyle.xaml"/>
-                <ResourceDictionary Source="/Resources/Templates/TimetableToolBarControls.xaml"/>
+                <ResourceDictionary Source="/Resources/Templates/MainWindow/StuffAndSubjectsDataGridStyle.xaml"/>
+                <ResourceDictionary Source="/Resources/Templates/MainWindow/TimetableToolBarControls.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Page.Resources>

@@ -50,6 +50,16 @@
     <!--Subjects DataGrid-->
     <v:String x:Key="SubjectName">Дисциплина</v:String>
 
+    <!--EntryWindow DataGrid-->
+    <v:String x:Key="bAuth">Войти</v:String>
+    <v:String x:Key="bForgotPass">Забыли пароль?</v:String>
+    <v:String x:Key="lPassword">Пароль</v:String>
+    <v:String x:Key="lLogin">Логин</v:String>
+
+
+    <!--Errors-->
+    <v:String x:Key="AuthFailcaption">Авторизация</v:String>
+    <v:String x:Key="AuthFailText">Неверный пароль или логин!</v:String>
 
 
 </ResourceDictionary>

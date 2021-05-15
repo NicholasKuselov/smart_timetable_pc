@@ -34,9 +34,9 @@
                 <ResourceDictionary Source="/Resources/Templates/MainWindow/NavButtonAnimation.xaml"/>
                 <ResourceDictionary Source="/Resources/Colors/MainColors.xaml"/>
                 <ResourceDictionary Source="/Resources/Icons.xaml"/>
-                <ResourceDictionary Source="/Resources/Templates/WindowControlButtons.xaml"/>
+                <ResourceDictionary Source="/Resources/Templates/MainWindow/WindowControlButtons.xaml"/>
                 <ResourceDictionary Source="/Resources/Templates/MainWindow/SettingButton.xaml"/>
-                <ResourceDictionary Source="/Resources/Templates/WeekListButtons.xaml"/>
+                <ResourceDictionary Source="/Resources/Templates/MainWindow/WeekListButtons.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
 

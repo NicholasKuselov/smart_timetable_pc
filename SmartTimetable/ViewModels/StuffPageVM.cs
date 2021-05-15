@@ -36,8 +36,17 @@ namespace SmartTimetable.ViewModels
             {
                 return new RelayCommand(() =>
                 {
+                    CheckListForNull();
                     DataBase.timetableDB.SaveChanges();
                 });
+            }
+        }
+
+        private void CheckListForNull()
+        {
+            for (int i = 0; i < ts.Count; i++)
+            {
+                if (ts[i].name == "" || ts[i].mail == "") ts.RemoveAt(i);
             }
         }
     }
