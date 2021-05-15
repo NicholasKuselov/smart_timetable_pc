@@ -28,9 +28,10 @@
         
             <StackPanel Grid.Row="0" Orientation="Horizontal" FlowDirection="LeftToRight" Background="{DynamicResource Color_WeekListPanel}">
                 <Button Width="25" Height="25" HorizontalAlignment="Left" Command="{Binding Save}" Template="{DynamicResource SaveTeacherButton}"/>
-            </StackPanel>
+                <Button Width="25" Height="25" HorizontalAlignment="Left" Command="{Binding Delete}" Template="{DynamicResource DeleteStuffButton}"/>
+        </StackPanel>
 
-        <DataGrid Grid.Row="1" Background="{DynamicResource Color_lb_Background}" Name="DG_Timetable" ItemsSource="{Binding ts}" Style="{DynamicResource DataGridStyle}">
+        <DataGrid Grid.Row="1" Background="{DynamicResource Color_lb_Background}" Name="DG_Timetable" ItemsSource="{Binding ts}" Style="{DynamicResource DataGridStyle}" SelectedItem="{Binding selectedItem}">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="{DynamicResource StuffName}" Binding="{Binding name}" Width="*" ></DataGridTextColumn>
                     <DataGridTextColumn Header="{DynamicResource StuffMail}" Binding="{Binding mail}" Width="*"></DataGridTextColumn>

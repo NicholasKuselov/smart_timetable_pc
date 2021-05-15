@@ -21,6 +21,8 @@ namespace SmartTimetable.ViewModels
 
         public ObservableCollection<teacher> Weeks { get; set; }
 
+        public teacher selectedItem { get; set; }
+
    
 
         public StuffPageVM()
@@ -42,12 +44,31 @@ namespace SmartTimetable.ViewModels
             }
         }
 
+        public ICommand Delete
+        {
+            get
+            {
+                return new RelayCommand(() =>
+                {
+                    DeleteItem();
+                });
+            }
+        }
+
         private void CheckListForNull()
         {
             for (int i = 0; i < ts.Count; i++)
             {
                 if (ts[i].name == "" || ts[i].mail == "") ts.RemoveAt(i);
             }
+        }
+
+        private void DeleteItem()
+        {
+            if (selectedItem!=null)
+            {
+                ts.Remove(selectedItem);
+            }           
         }
     }
 }
