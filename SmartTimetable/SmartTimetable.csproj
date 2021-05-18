@@ -186,6 +186,10 @@
     <Compile Include="Windows\WeekCreateWindow.xaml.cs">
       <DependentUpon>WeekCreateWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Resources\Local\lang.ua-ua.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Resources\Templates\EntryWindow\EntryWindowButtons.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

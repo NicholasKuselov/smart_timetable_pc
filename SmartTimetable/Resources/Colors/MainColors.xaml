@@ -15,6 +15,7 @@
     <v:SolidColorBrush x:Key="Color_WindowControlButtonsPressed" Color="#CCFFFFFF"/>
 
     <v:SolidColorBrush x:Key="Color_ProgramNameLaberForecolor" Color="White"/>
+    <v:SolidColorBrush x:Key="Color_ProgramNameSecondaryLaberForecolor" Color="#b5b5b5"/>
 
     <!--TimeTablePage--> 
     <v:SolidColorBrush x:Key="Color_WeekListPanel" Color="#1d2228"/>

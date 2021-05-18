@@ -61,11 +61,12 @@ namespace SmartTimetable.ViewModels
         public BindingList<timetable> FifthDay { get; set; }
         public BindingList<timetable> SixthDay { get; set; }
 
-        List<BindingList<timetable>> Days = new List<BindingList<timetable>>();
+        BindingList<BindingList<timetable>> Days = new BindingList<BindingList<timetable>>();
         public BindingList<string> groupsForTable { get; set; }
         public WeekDate weekDate { get; set; } //Содержит в себе все даты недели, с пнд по сбт.
+        public timetable selectedItem { get; set; }
 
-        //Constr
+
         public TimetableWindowViewModel()
         { 
             //weekDate = new WeekDate();
@@ -125,6 +126,18 @@ namespace SmartTimetable.ViewModels
                 });
             }
         }
+        public ICommand Delete
+        {
+            get
+            {
+                return new RelayCommand(() =>
+                {
+                    DeleteLesson();
+                });
+            }
+        }
+
+
 
 
         private void LoadComponents()
@@ -249,11 +262,29 @@ namespace SmartTimetable.ViewModels
                         if(timetables.Count>0) Days[i][j].idtimetable = timetables[timetables.Count - 1].idtimetable + 1;
                         else Days[i][j].idtimetable = 1;
                         timetables.Add(Days[i][j]);
+                    }else if (Days[i][j].teacher1 == null && Days[i][j].subject1 == null && timetables.Contains(Days[i][j]))
+                    {
+                       
+
+                        timetables.AllowRemove = true;
+                        timetables.Remove(Days[i][j]);
+
+                        timetable tt = new timetable();
+
+                        tt.Date = Days[i][j].Date;
+                        tt.Day = Days[i][j].Day;
+                        tt.Week = Days[i][j].Week;
+                        tt.Group = Days[i][j].Group;
+                        tt.Course = Days[i][j].Course;
+                        tt.Time = Days[i][j].Time;
+                        tt.times = Days[i][j].times;
+
+                        Days[i][j] = tt;
                     }
-                  //  else if (Days[i][j].teacher1 == null && Days[i][j].subject1 == null && timetables.Contains(Days[i][j]))
-                   // {
-                   //     timetables.Remove(Days[i][j]);
-                 //   }
+                    //  else if (Days[i][j].teacher1 == null && Days[i][j].subject1 == null && timetables.Contains(Days[i][j]))
+                    // {
+                    //     timetables.Remove(Days[i][j]);
+                    //   }
                 }  
             }
             DataBase.timetableDB.SaveChanges();
@@ -316,6 +347,18 @@ namespace SmartTimetable.ViewModels
 
 
             InitTable(item.idweek);
+        }
+
+        private void DeleteLesson()
+        {
+            if(selectedItem!=null) 
+            {
+                if(MessageBox.Show((string)Application.Current.Resources["DeleteLesson"], (string)Application.Current.Resources["DeleteCaption"], MessageBoxButton.YesNo, MessageBoxImage.Error) == MessageBoxResult.Yes){
+                    selectedItem.teacher1 = null;
+                    selectedItem.subject1 = null;
+                }
+ 
+            }
         }
     }
 

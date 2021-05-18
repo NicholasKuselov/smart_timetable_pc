@@ -2,6 +2,7 @@
 using SmartTimetable.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,6 +33,11 @@ namespace SmartTimetable.Windows
         void Window1_SourceInitialized(object sender, EventArgs e)
         {
             WindowSizing.WindowInitialized(this);
+        }
+
+        private void Hyperlink_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("https://github.com/NicholasKuselov/smart_timetable_pc");
         }
     }
 }

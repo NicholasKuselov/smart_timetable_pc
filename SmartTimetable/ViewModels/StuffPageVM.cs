@@ -57,9 +57,10 @@ namespace SmartTimetable.ViewModels
 
         private void CheckListForNull()
         {
-            for (int i = 0; i < ts.Count; i++)
+            for (int i = ts.Count-1; i >= 0; i--)
             {
-                if (ts[i].name == "" || ts[i].mail == "") ts.RemoveAt(i);
+                if (ts[i].name == "" || ts[i].mail == "" || ts[i].name == null || ts[i].mail == null)
+                { ts.RemoveAt(i); MessageBox.Show("asas"); }
             }
         }
 
@@ -67,6 +68,7 @@ namespace SmartTimetable.ViewModels
         {
             if (selectedItem!=null)
             {
+                ts.AllowRemove = true;
                 ts.Remove(selectedItem);
             }           
         }

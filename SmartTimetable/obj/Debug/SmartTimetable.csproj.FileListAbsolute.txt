@@ -87,3 +87,4 @@ C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Resources\Tem
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Resources\Templates\EntryWindow\EntryWindowTextBoxStyles.baml
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Resources\Templates\EntryWindow\EntryWindowButtons.baml
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\SmartTimetable.csprojAssemblyReference.cache
+C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Resources\Local\lang.ua-ua.baml

@@ -56,6 +56,9 @@
     <v:String x:Key="lPassword">Пароль</v:String>
     <v:String x:Key="lLogin">Логин</v:String>
 
+    <!--Warnings-->
+    <v:String x:Key="DeleteCaption">Удаление</v:String>
+    <v:String x:Key="DeleteLesson">Точно удалить урок: </v:String>
 
     <!--Errors-->
     <v:String x:Key="AuthFailcaption">Авторизация</v:String>

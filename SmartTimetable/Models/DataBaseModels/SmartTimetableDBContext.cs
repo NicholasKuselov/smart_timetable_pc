@@ -29,7 +29,7 @@ namespace SmartTimetable.Models.DataBaseModels
                 .HasMany(e => e.timetable)
                 .WithRequired(e => e.course1)
                 .HasForeignKey(e => e.Course)
-                .WillCascadeOnDelete(false);
+                .WillCascadeOnDelete(true);
 
             modelBuilder.Entity<dates>()
                 .Property(e => e.date)
@@ -39,7 +39,7 @@ namespace SmartTimetable.Models.DataBaseModels
                 .HasMany(e => e.timetable)
                 .WithRequired(e => e.dates)
                 .HasForeignKey(e => e.Date)
-                .WillCascadeOnDelete(false);
+                .WillCascadeOnDelete(true);
 
             modelBuilder.Entity<day>()
                 .Property(e => e.name)
@@ -49,7 +49,7 @@ namespace SmartTimetable.Models.DataBaseModels
                 .HasMany(e => e.timetable)
                 .WithRequired(e => e.day1)
                 .HasForeignKey(e => e.Day)
-                .WillCascadeOnDelete(false);
+                .WillCascadeOnDelete(true);
 
             modelBuilder.Entity<group>()
                 .Property(e => e.name)
@@ -59,7 +59,7 @@ namespace SmartTimetable.Models.DataBaseModels
                 .HasMany(e => e.timetable)
                 .WithRequired(e => e.group1)
                 .HasForeignKey(e => e.Group)
-                .WillCascadeOnDelete(false);
+                .WillCascadeOnDelete(true);
 
             modelBuilder.Entity<subject>()
                 .Property(e => e.name)
@@ -69,7 +69,7 @@ namespace SmartTimetable.Models.DataBaseModels
                 .HasMany(e => e.timetable)
                 .WithRequired(e => e.subject1)
                 .HasForeignKey(e => e.Subject)
-                .WillCascadeOnDelete(false);
+                .WillCascadeOnDelete(true);
 
             modelBuilder.Entity<teacher>()
                 .Property(e => e.name)
@@ -83,7 +83,7 @@ namespace SmartTimetable.Models.DataBaseModels
                 .HasMany(e => e.timetable)
                 .WithRequired(e => e.teacher1)
                 .HasForeignKey(e => e.Teacher)
-                .WillCascadeOnDelete(false);
+                .WillCascadeOnDelete(true);
 
             modelBuilder.Entity<times>()
                 .Property(e => e.timeFrom)
@@ -97,7 +97,7 @@ namespace SmartTimetable.Models.DataBaseModels
                 .HasMany(e => e.timetable)
                 .WithRequired(e => e.times)
                 .HasForeignKey(e => e.Time)
-                .WillCascadeOnDelete(false);
+                .WillCascadeOnDelete(true);
 
             modelBuilder.Entity<users>()
                 .Property(e => e.login)
@@ -123,7 +123,7 @@ namespace SmartTimetable.Models.DataBaseModels
                 .HasMany(e => e.timetable)
                 .WithRequired(e => e.week1)
                 .HasForeignKey(e => e.Week)
-                .WillCascadeOnDelete(false);
+                .WillCascadeOnDelete(true);
         }
     }
 }

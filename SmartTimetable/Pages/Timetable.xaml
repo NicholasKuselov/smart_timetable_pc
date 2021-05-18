@@ -55,6 +55,7 @@
 
                 <StackPanel Grid.Row="0" Orientation="Horizontal" FlowDirection="LeftToRight" Background="{DynamicResource Color_WeekListPanel}">
                     <Button Width="25" Height="25" Background="Red" HorizontalAlignment="Left" Command="{Binding Save}" Template="{DynamicResource SaveButton}"/>
+                    <Button Width="25" Height="25" HorizontalAlignment="Left" Command="{Binding Delete}" Template="{DynamicResource DeleteStuffButton}" Margin="10,0,0,0"/>
                 </StackPanel>
 
                 <ScrollViewer Grid.Row="1">
@@ -117,7 +118,7 @@
                             </DataGrid.Columns>
                         </DataGrid>
 
-                        <DataGrid Grid.Row="2" Grid.Column="1" ItemsSource="{Binding FirstDay}" Style="{DynamicResource TimetableDataGridStyle}" SelectionUnit="CellOrRowHeader" >
+                        <DataGrid Grid.Row="2" Grid.Column="1" ItemsSource="{Binding FirstDay}" Style="{DynamicResource TimetableDataGridStyle}" SelectionUnit="FullRow" SelectedItem="{Binding selectedItem}" >
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="{DynamicResource Time}" Binding="{Binding GetTime}" Width="*"></DataGridTextColumn>
                                 <DataGridComboBoxColumn  Header="{DynamicResource Subject}" ItemsSource="{Binding Source={StaticResource subjects}}" SelectedItemBinding="{Binding Path=subject1}" DisplayMemberPath="name" Width="*"></DataGridComboBoxColumn>
@@ -125,7 +126,7 @@
                             </DataGrid.Columns>
                         </DataGrid>
 
-                        <DataGrid Grid.Row="2" Grid.Column="2" ItemsSource="{Binding SecondDay}" Style="{DynamicResource TimetableDataGridStyle}">
+                        <DataGrid Grid.Row="2" Grid.Column="2" ItemsSource="{Binding SecondDay}" Style="{DynamicResource TimetableDataGridStyle}"  SelectedItem="{Binding selectedItem}">
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="{DynamicResource Time}" Binding="{Binding GetTime}" Width="*"></DataGridTextColumn>
                                 <DataGridComboBoxColumn  Header="{DynamicResource Subject}" ItemsSource="{Binding Source={StaticResource subjects}}" SelectedItemBinding="{Binding Path=subject1}" DisplayMemberPath="name" Width="*"></DataGridComboBoxColumn>
@@ -133,7 +134,7 @@
                             </DataGrid.Columns>
                         </DataGrid>
 
-                        <DataGrid Grid.Row="2" Grid.Column="3" ItemsSource="{Binding ThirdDay}" Style="{DynamicResource TimetableDataGridStyle}">
+                        <DataGrid Grid.Row="2" Grid.Column="3" ItemsSource="{Binding ThirdDay}" Style="{DynamicResource TimetableDataGridStyle}"  SelectedItem="{Binding selectedItem}">
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="{DynamicResource Time}" Binding="{Binding GetTime}" Width="*"></DataGridTextColumn>
                                 <DataGridComboBoxColumn  Header="{DynamicResource Subject}" ItemsSource="{Binding Source={StaticResource subjects}}" SelectedItemBinding="{Binding Path=subject1}" DisplayMemberPath="name" Width="*"></DataGridComboBoxColumn>

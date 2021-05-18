@@ -1,0 +1,68 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+
+    <v:String x:Key="ProgramName">Smart Timetable</v:String>
+
+    <!--MainWindow page-->
+    <v:String x:Key="bTimetable">Розклад</v:String>
+    <v:String x:Key="bSubjects">Дисципліни</v:String>
+    <v:String x:Key="bTeachers">Викладачі</v:String>
+    <v:String x:Key="bGroups">Спеціальності</v:String>
+    <v:String x:Key="bCourses">Курси</v:String>
+
+    <!--WeekCreate Window-->
+    <v:String x:Key="WeekAddingDesc">Оберіть понеділок потрібного тижня</v:String>
+    <v:String x:Key="bAdd">Додати</v:String>
+    <v:String x:Key="bCancel">Скасувати</v:String>
+
+    <!--Timetable page-->
+    <v:String x:Key="lWeeks">Тижні</v:String>
+    <v:String x:Key="bAddWeek">Додати</v:String>
+
+    <!--Group page-->
+    <v:String x:Key="lGroup">Спеціальність</v:String>
+
+
+    <!--Course page-->
+    <v:String x:Key="lCourse">Курс №</v:String>
+
+
+    <!--Days-->
+    <v:String x:Key="FirstDay">Понеділок</v:String>
+    <v:String x:Key="SecondDay">Вівторок</v:String>
+    <v:String x:Key="ThirdDay">Середа</v:String>
+    <v:String x:Key="FourthDay">Четвер</v:String>
+    <v:String x:Key="FifthDay">П'ятниця</v:String>
+    <v:String x:Key="SixthDay">Субота</v:String>
+
+    <!--Timetable DataGrid-->
+    <v:String x:Key="Group">Спец.</v:String>
+    <v:String x:Key="Time">Час</v:String>
+    <v:String x:Key="Subject">Дисципліна</v:String>
+    <v:String x:Key="Teacher">Викладач</v:String>
+
+    <!--Stuff DataGrid-->
+    <v:String x:Key="StuffName">ПІБ</v:String>
+    <v:String x:Key="StuffMail">Пошта</v:String>
+
+    <!--Subjects DataGrid-->
+    <v:String x:Key="SubjectName">Дисципліна</v:String>
+
+    <!--EntryWindow-->
+    <v:String x:Key="bAuth">Війти</v:String>
+    <v:String x:Key="bForgotPass">Забули пароль?</v:String>
+    <v:String x:Key="lPassword">Пароль</v:String>
+    <v:String x:Key="lLogin">Логін</v:String>
+    <v:String x:Key="lAuth">Авторизація</v:String>
+    <v:String x:Key="ProgramNameSecondary">Система електронного розкладу ЛНУ ім. Тараса Шевченка</v:String>
+
+    <!--Warnings-->
+    <v:String x:Key="DeleteCaption">Видалення</v:String>
+    <v:String x:Key="DeleteLesson">Видалити заняття?</v:String>
+
+    <!--Errors-->
+    <v:String x:Key="AuthFailcaption">Авторизація</v:String>
+    <v:String x:Key="AuthFailText">Невірний пароль або логін!</v:String>
+
+</ResourceDictionary>
