@@ -145,6 +145,7 @@
     <Compile Include="Models\DataBase.cs" />
     <Compile Include="Models\DataBaseModels\SmartTimetableDBContext.cs" />
     <Compile Include="Models\DataBaseModels\times.cs" />
+    <Compile Include="Models\IWindowNotifier.cs" />
     <Compile Include="Models\LessonsTime.cs" />
     <Compile Include="Models\LessonTimeModel.cs" />
     <Compile Include="Models\Week.cs" />
@@ -179,9 +180,13 @@
     <Compile Include="ViewModels\SubjectPageVM.cs" />
     <Compile Include="ViewModels\TimetableWindowViewModel.cs" />
     <Compile Include="Models\DataBaseModels\week.cs" />
+    <Compile Include="ViewModels\UserSettingsWindowVM.cs" />
     <Compile Include="ViewModels\WeekCreateWindowVM.cs" />
     <Compile Include="Windows\EntryWindow.xaml.cs">
       <DependentUpon>EntryWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\UserSettingsWindow.xaml.cs">
+      <DependentUpon>UserSettingsWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\WeekCreateWindow.xaml.cs">
       <DependentUpon>WeekCreateWindow.xaml</DependentUpon>
@@ -199,6 +204,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Resources\Templates\EntryWindow\EntryWindowTextBoxStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Templates\UserSettingsWindow\ButtonStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Templates\UserSettingsWindow\LabelStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Templates\UserSettingsWindow\TextBoxStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -279,6 +296,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Resources\Templates\MainWindow\WindowControlButtons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\UserSettingsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

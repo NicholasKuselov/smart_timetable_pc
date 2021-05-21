@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\App.xaml
-23495341030
+271479169031
 
-41-1825424630
+441050618286
 147-1984222274
-Resources\Local\lang.ua-ua.xaml;Resources\Templates\EntryWindow\EntryWindowButtons.xaml;Resources\Templates\EntryWindow\EntryWindowControlButton.xaml;Resources\Templates\EntryWindow\EntryWindowTextBoxStyles.xaml;Windows\EntryWindow.xaml;Windows\MainWindow.xaml;Pages\Course.xaml;Pages\Group.xaml;Pages\Stuff.xaml;Pages\Subjects.xaml;Pages\Timetable.xaml;Pages\TinetableCreationStage.xaml;Resources\Colors\MainColors.xaml;Resources\Icons.xaml;Resources\Local\lang.ru-ru.xaml;Resources\Templates\MainWindow\NavButtonAnimation.xaml;Resources\Templates\MainWindow\SettingButton.xaml;Resources\Templates\MainWindow\StuffAndSubjectsDataGridStyle.xaml;Resources\Templates\MainWindow\TimetableDataGridStyles.xaml;Resources\Templates\MainWindow\TimetableToolBarControls.xaml;Resources\Templates\MainWindow\WeekListButtons.xaml;Resources\Templates\MainWindow\WindowControlButtons.xaml;Windows\WeekCreateWindow.xaml;
+Resources\Local\lang.ua-ua.xaml;Resources\Templates\EntryWindow\EntryWindowButtons.xaml;Resources\Templates\EntryWindow\EntryWindowControlButton.xaml;Resources\Templates\EntryWindow\EntryWindowTextBoxStyles.xaml;Resources\Templates\UserSettingsWindow\ButtonStyles.xaml;Resources\Templates\UserSettingsWindow\LabelStyles.xaml;Resources\Templates\UserSettingsWindow\TextBoxStyles.xaml;Windows\EntryWindow.xaml;Windows\MainWindow.xaml;Pages\Course.xaml;Pages\Group.xaml;Pages\Stuff.xaml;Pages\Subjects.xaml;Pages\Timetable.xaml;Pages\TinetableCreationStage.xaml;Resources\Colors\MainColors.xaml;Resources\Icons.xaml;Resources\Local\lang.ru-ru.xaml;Resources\Templates\MainWindow\NavButtonAnimation.xaml;Resources\Templates\MainWindow\SettingButton.xaml;Resources\Templates\MainWindow\StuffAndSubjectsDataGridStyle.xaml;Resources\Templates\MainWindow\TimetableDataGridStyles.xaml;Resources\Templates\MainWindow\TimetableToolBarControls.xaml;Resources\Templates\MainWindow\WeekListButtons.xaml;Resources\Templates\MainWindow\WindowControlButtons.xaml;Windows\UserSettingsWindow.xaml;Windows\WeekCreateWindow.xaml;
 
 True
 

@@ -17,7 +17,7 @@ namespace SmartTimetable.Models.DataBaseModels
         public string login { get; set; }
 
         [Required]
-        [StringLength(45)]
+        [StringLength(120)]
         public string password { get; set; }
 
         [Required]

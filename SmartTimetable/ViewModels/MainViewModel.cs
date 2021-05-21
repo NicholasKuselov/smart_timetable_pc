@@ -1,6 +1,8 @@
 ﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using SmartTimetable.Controllers;
 using SmartTimetable.Properties;
+using SmartTimetable.Windows;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -14,7 +16,7 @@ using System.Windows.Resources;
 
 namespace SmartTimetable.ViewModels
 {
-    class MainViewModel : ViewModelBase
+    public class MainViewModel : ViewModelBase
     {
         private Page Timetable;
         private Page Stuff;
@@ -26,6 +28,9 @@ namespace SmartTimetable.ViewModels
 
         public bool ttt { get; set; }
 
+        public string userName { get; set; } = Setting.currentUser.name;
+
+
         public MainViewModel()
         {
             Timetable = new Pages.Timetable();
@@ -36,7 +41,7 @@ namespace SmartTimetable.ViewModels
 
             CurrentPage = Timetable;
         }
-        
+
         public ICommand GoToStuffPage
         {
             get
@@ -85,11 +90,11 @@ namespace SmartTimetable.ViewModels
             {
                 return new RelayCommand(() =>
                 {
-                    if (CurrentPage!=Subject)
+                    if (CurrentPage != Subject)
                     {
                         CurrentPage = Subject;
                     }
-                    
+
                 });
             }
         }
@@ -124,7 +129,7 @@ namespace SmartTimetable.ViewModels
             {
                 return new RelayCommand(() =>
                 {
-                    if(Application.Current.MainWindow.WindowState == WindowState.Maximized)
+                    if (Application.Current.MainWindow.WindowState == WindowState.Maximized)
                     {
                         Application.Current.MainWindow.WindowState = WindowState.Normal;
                     }
@@ -147,6 +152,13 @@ namespace SmartTimetable.ViewModels
                 });
             }
         }
+
+
+        public void UpdateUserName()
+        {
+            userName = Setting.currentUser.name;
+        }
+
 
     }
 }

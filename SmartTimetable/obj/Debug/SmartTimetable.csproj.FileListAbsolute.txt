@@ -86,5 +86,10 @@ C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Resources\Tem
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Resources\Templates\EntryWindow\EntryWindowControlButton.baml
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Resources\Templates\EntryWindow\EntryWindowTextBoxStyles.baml
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Resources\Templates\EntryWindow\EntryWindowButtons.baml
-C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\SmartTimetable.csprojAssemblyReference.cache
 C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Resources\Local\lang.ua-ua.baml
+C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Windows\UserSettingsWindow.g.cs
+C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Windows\UserSettingsWindow.baml
+C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Resources\Templates\UserSettingsWindow\ButtonStyles.baml
+C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Resources\Templates\UserSettingsWindow\LabelStyles.baml
+C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\Resources\Templates\UserSettingsWindow\TextBoxStyles.baml
+C:\Users\Odin\source\repos\SmartTimetable\SmartTimetable\obj\Debug\SmartTimetable.csprojAssemblyReference.cache

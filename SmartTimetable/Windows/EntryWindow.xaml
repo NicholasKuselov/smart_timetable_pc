@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:SmartTimetable.Windows" xmlns:viewmodels="clr-namespace:SmartTimetable.ViewModels"
         xmlns:shell="http://schemas.microsoft.com/netfx/2009/xaml/presentation"
         mc:Ignorable="d"
-        Title="EntryWindow" Height="450" Width="800" ResizeMode="NoResize" Background="Red" BorderBrush="#FF8F8F8F" BorderThickness="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" AllowsTransparency="False" WindowStyle="None" SnapsToDevicePixels="False">
+        Title="EntryWindow" Height="450" Width="800" ResizeMode="NoResize" Background="Red" BorderBrush="#FF8F8F8F" BorderThickness="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" AllowsTransparency="False" WindowStyle="None" SnapsToDevicePixels="False" Closing="Window_Closing">
 
     <Window.Style>
         <Style TargetType="{x:Type Window}">

@@ -1,0 +1,59 @@
+﻿<Window x:Class="SmartTimetable.Windows.UserSettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SmartTimetable.Windows" xmlns:viewmodels="clr-namespace:SmartTimetable.ViewModels"
+        mc:Ignorable="d"
+        Title="UserSettingsWindow" Height="400" Width="500">
+
+    <Window.Resources>
+        <ResourceDictionary>
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/Templates/MainWindow/NavButtonAnimation.xaml"/>
+                <ResourceDictionary Source="/Resources/Colors/MainColors.xaml"/>
+                <ResourceDictionary Source="/Resources/Icons.xaml"/>
+                <ResourceDictionary Source="/Resources/Templates/MainWindow/WindowControlButtons.xaml"/>
+                <ResourceDictionary Source="/Resources/Templates/MainWindow/SettingButton.xaml"/>
+                <ResourceDictionary Source="/Resources/Templates/MainWindow/WeekListButtons.xaml"/>
+                <ResourceDictionary Source="/Resources/Templates/UserSettingsWindow/ButtonStyles.xaml"/>
+                <ResourceDictionary Source="/Resources/Templates/UserSettingsWindow/LabelStyles.xaml"/>
+                <ResourceDictionary Source="/Resources/Templates/UserSettingsWindow/TextBoxStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+    </Window.Resources>
+
+    <Window.DataContext>
+        <viewmodels:UserSettingsWindowVM></viewmodels:UserSettingsWindowVM>
+    </Window.DataContext>
+
+    <Grid Background="{DynamicResource Color_MainWindow}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="{Binding userName}" Foreground="White" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Button Grid.Row="0" Grid.Column="1" Template="{DynamicResource ExitButton}" Width="250" Height="40" Click="ExitButton_Click"/>
+        <TextBox Grid.Row="1" Grid.Column="0"  Text="{Binding newPassword}" Style="{DynamicResource PassTextBoxStyle}" Width="200"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding newPasswordSecond}" Style="{DynamicResource PassSecondTextBoxStyle}" Width="200"/>
+        <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Command="{Binding SaveNewPassword}" Template="{DynamicResource ChangePasswordButton}" Width="250" Height="40"/>
+        <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Content="{DynamicResource bAddNewUser}" Foreground="White" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBox Grid.Row="4" Grid.Column="0"  Text="{Binding newUserLogin}" Style="{DynamicResource LoginTextBoxStyle}" Width="200"/>
+        <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding newUserName}" Style="{DynamicResource NameTextBoxStyle}" Width="200"/>
+        <TextBox Grid.Row="5" Grid.Column="0"  Text="{Binding newUserPassword}" Style="{DynamicResource PassTextBoxStyle}" Width="200"/>
+        <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding newUserPasswordSecond}" Style="{DynamicResource PassSecondTextBoxStyle}" Width="200"/>
+        <Button Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Template="{DynamicResource AddNewUserButton}" Width="250" Height="40" Command="{Binding AddNewUser}"/>
+    </Grid>
+</Window>

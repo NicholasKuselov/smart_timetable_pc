@@ -53,9 +53,16 @@
     <v:String x:Key="bAuth">Війти</v:String>
     <v:String x:Key="bForgotPass">Забули пароль?</v:String>
     <v:String x:Key="lPassword">Пароль</v:String>
+    <v:String x:Key="lPasswordDouble">Повторіть пароль</v:String>
     <v:String x:Key="lLogin">Логін</v:String>
     <v:String x:Key="lAuth">Авторизація</v:String>
+    <v:String x:Key="lName">Ім'я</v:String>
     <v:String x:Key="ProgramNameSecondary">Система електронного розкладу ЛНУ ім. Тараса Шевченка</v:String>
+    
+    <!-- UserSettingsWindow-->
+    <v:String x:Key="bExit">Вихід</v:String>
+    <v:String x:Key="bAddNewUser">Додати користувача</v:String>
+    <v:String x:Key="bChangePassword">Змінити пароль</v:String>
 
     <!--Warnings-->
     <v:String x:Key="DeleteCaption">Видалення</v:String>
@@ -64,5 +71,13 @@
     <!--Errors-->
     <v:String x:Key="AuthFailcaption">Авторизація</v:String>
     <v:String x:Key="AuthFailText">Невірний пароль або логін!</v:String>
+    <v:String x:Key="NewPasswordscaption">Зміна паролю</v:String>
+    <v:String x:Key="NewPasswordsNotEqualsText">Введені паролі не співпадають!</v:String>
+    <v:String x:Key="NewPasswordsFieldsIsClearText">Не введене поле паролю</v:String>
+    <v:String x:Key="NewUsercaption">Зміна паролю</v:String>
+    <v:String x:Key="NewUserFieldsClearText">Введені паролі не співпадають!</v:String>
+    <v:String x:Key="NewUserLoginAlreadyRegisterText">Введені паролі не співпадають!</v:String>
+    
+    
 
 </ResourceDictionary>

@@ -45,4 +45,18 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
+    <ControlTemplate x:Key="UserButton" TargetType="{x:Type Button}">
+        <Border   Name="border" Background="Transparent">
+            <TextBlock Text="{Binding userName}" Foreground="{DynamicResource Color_ProgramNameSecondaryLaberForecolor}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14"/>
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="border" Property="Background" Value="{DynamicResource ResourceKey=Color_WindowControlButtonsFocus}"></Setter>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter TargetName="border" Property="Background" Value="{DynamicResource ResourceKey=Color_WindowControlButtonsPressed}"></Setter>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
 </ResourceDictionary>

@@ -22,10 +22,12 @@ namespace SmartTimetable.Windows
     /// </summary>
     public partial class EntryWindow : Window
     {
-        public EntryWindow()
+        MainWindow parent;
+        public EntryWindow(MainWindow parent)
         {
             InitializeComponent();
-            this.DataContext = new EntryWindowVM(this);
+            this.DataContext = new EntryWindowVM(this,parent);
+            this.parent = parent;
             this.MouseLeftButtonDown += delegate { this.DragMove(); };
             this.SourceInitialized += new EventHandler(Window1_SourceInitialized);
         }
@@ -38,6 +40,11 @@ namespace SmartTimetable.Windows
         private void Hyperlink_Click(object sender, RoutedEventArgs e)
         {
             Process.Start("https://github.com/NicholasKuselov/smart_timetable_pc");
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            //parent.Close();
         }
     }
 }

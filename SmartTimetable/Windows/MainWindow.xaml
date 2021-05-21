@@ -56,6 +56,7 @@
                 <Button Width="50" Command="{Binding MaximizeWindowCommand}" Height="30" Margin="0,0,50,0" HorizontalAlignment="Right" VerticalAlignment="Top" Template="{DynamicResource MaximizeButton}" />
                 <Button Width="50" Command="{Binding MinimizeWindowCommand}" Height="30" Margin="0,0,100,0" HorizontalAlignment="Right" VerticalAlignment="Top" Template="{DynamicResource MinimizeButton}" />
                 <Button Width="30" Height="30" Margin="0,0,155,0" HorizontalAlignment="Right" VerticalAlignment="Top" Template="{DynamicResource SettingButton}" />
+                <Button Width="130" Height="30" Margin="0,0,200,0" HorizontalAlignment="Right" VerticalAlignment="Top" Template="{DynamicResource UserButton}" Click="UserButton_Click" />
             </Grid>
             <StackPanel DockPanel.Dock="Top" Height="40" VerticalAlignment="Top" Background="{DynamicResource Color_MainWindow}" Orientation="Horizontal" >
                 <RadioButton Command="{Binding GoToTimetablePage}" Style="{DynamicResource MainNavigationButtonAnim}" Template="{DynamicResource WithoutBackgroundAnim}"  Margin="10,0,0,0" HorizontalAlignment="Left" Content ="{DynamicResource bTimetable}" Name="b_Timetable" FontSize="20" Background="{DynamicResource Color_MainNavButtons}" GroupName="NavButtonGoup"/>

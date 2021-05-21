@@ -16,6 +16,7 @@ namespace SmartTimetable.ViewModels
     class EntryWindowVM : ViewModelBase
     {
         EntryWindow entryWindow;
+        MainWindow parent;
 
         public string login { get; set; }
 
@@ -23,8 +24,9 @@ namespace SmartTimetable.ViewModels
 
         public EntryWindowVM() { }
 
-        public EntryWindowVM(EntryWindow entryWindow)
+        public EntryWindowVM(EntryWindow entryWindow,MainWindow mainWindow)
         {
+            parent = mainWindow;
             this.entryWindow = entryWindow;
         }
 
@@ -87,6 +89,7 @@ namespace SmartTimetable.ViewModels
 
             if(DataBase.Auth(login,passHex))
             {
+               // Setting.currentUserName = login;
                 OpenMainWindow();
             }
             else
@@ -98,7 +101,7 @@ namespace SmartTimetable.ViewModels
 
         public void OpenMainWindow()
         {
-            new MainWindow().Show();
+            parent.AuthSuccess();
             this.entryWindow.Close();
         }
 

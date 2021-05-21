@@ -1,0 +1,127 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <Style TargetType="TextBox" x:Key="PassTextBoxStyle" >
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
+        <Setter Property="Margin" Value="5,0,5,0"></Setter>
+        <Setter Property="Height" Value="30"></Setter>
+        <Setter Property="TextWrapping" Value="Wrap"></Setter>
+
+        <Setter Property="Background" Value="Transparent"></Setter>
+        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        <Setter Property="Foreground" Value="White"></Setter>
+
+        <Style.Resources>
+            <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
+                <VisualBrush.Visual>
+                    <Label Content="{DynamicResource lPassword}" Foreground="LightGray"/>
+                </VisualBrush.Visual>
+            </VisualBrush>
+        </Style.Resources>
+        <Style.Triggers>
+            <Trigger Property="Text" Value="">
+                <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+            </Trigger>
+            <Trigger Property="Text" Value="{x:Null}">
+                <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+            </Trigger>
+            <Trigger Property="IsKeyboardFocused" Value="True">
+                <Setter Property="Background" Value="Transparent" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="TextBox" x:Key="PassSecondTextBoxStyle" >
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
+        <Setter Property="Margin" Value="5,0,5,0"></Setter>
+        <Setter Property="Height" Value="30"></Setter>
+        <Setter Property="TextWrapping" Value="Wrap"></Setter>
+
+        <Setter Property="Background" Value="Transparent"></Setter>
+        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        <Setter Property="Foreground" Value="White"></Setter>
+
+        <Style.Resources>
+            <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
+                <VisualBrush.Visual>
+                    <Label Content="{DynamicResource lPasswordDouble}" Foreground="LightGray"/>
+                </VisualBrush.Visual>
+            </VisualBrush>
+        </Style.Resources>
+        <Style.Triggers>
+            <Trigger Property="Text" Value="">
+                <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+            </Trigger>
+            <Trigger Property="Text" Value="{x:Null}">
+                <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+            </Trigger>
+            <Trigger Property="IsKeyboardFocused" Value="True">
+                <Setter Property="Background" Value="Transparent" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="TextBox" x:Key="LoginTextBoxStyle" >
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
+        <Setter Property="Margin" Value="5,0,5,0"></Setter>
+        <Setter Property="Height" Value="30"></Setter>
+        <Setter Property="TextWrapping" Value="Wrap"></Setter>
+
+        <Setter Property="Background" Value="Transparent"></Setter>
+        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        <Setter Property="Foreground" Value="White"></Setter>
+
+        <Style.Resources>
+            <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
+                <VisualBrush.Visual>
+                    <Label Content="{DynamicResource lLogin}" Foreground="LightGray"/>
+                </VisualBrush.Visual>
+            </VisualBrush>
+        </Style.Resources>
+        <Style.Triggers>
+            <Trigger Property="Text" Value="">
+                <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+            </Trigger>
+            <Trigger Property="Text" Value="{x:Null}">
+                <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+            </Trigger>
+            <Trigger Property="IsKeyboardFocused" Value="True">
+                <Setter Property="Background" Value="Transparent" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="TextBox" x:Key="NameTextBoxStyle" >
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
+        <Setter Property="Margin" Value="5,0,5,0"></Setter>
+        <Setter Property="Height" Value="30"></Setter>
+        <Setter Property="TextWrapping" Value="Wrap"></Setter>
+
+        <Setter Property="Background" Value="Transparent"></Setter>
+        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        <Setter Property="Foreground" Value="White"></Setter>
+
+        <Style.Resources>
+            <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
+                <VisualBrush.Visual>
+                    <Label Content="{DynamicResource lName}" Foreground="LightGray"/>
+                </VisualBrush.Visual>
+            </VisualBrush>
+        </Style.Resources>
+        <Style.Triggers>
+            <Trigger Property="Text" Value="">
+                <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+            </Trigger>
+            <Trigger Property="Text" Value="{x:Null}">
+                <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+            </Trigger>
+            <Trigger Property="IsKeyboardFocused" Value="True">
+                <Setter Property="Background" Value="Transparent" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>

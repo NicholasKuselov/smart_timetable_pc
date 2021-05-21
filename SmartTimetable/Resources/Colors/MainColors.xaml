@@ -54,6 +54,15 @@
     <v:SolidColorBrush x:Key="Color_AuthButtonBackgroundFocus" Color="#fffb00"/>
     <v:SolidColorBrush x:Key="Color_AuthButtonBackgroundPress" Color="#febd01"/>
     <v:SolidColorBrush x:Key="Color_ForgotPassButton" Color="#454e55"/>
-    
 
+    <!--UserSettings window-->
+    <v:SolidColorBrush x:Key="Color_ExitButtonBackground" Color="#b80009"/>
+    <v:SolidColorBrush x:Key="Color_ExitButtonBackgroundFocus" Color="#e3000b"/>
+    <v:SolidColorBrush x:Key="Color_ExitButtonBackgroundPress" Color="#750006"/>
+    <v:SolidColorBrush x:Key="Color_AddNewUserButtonBackground" Color="#15a100"/>
+    <v:SolidColorBrush x:Key="Color_AddNewUserButtonBackgroundFocus" Color="#1ac900"/>
+    <v:SolidColorBrush x:Key="Color_AddNewUserButtonBackgroundPress" Color="#0f7500"/>
+    <v:SolidColorBrush x:Key="Color_ChangePasswordButtonBackground" Color="#15a100"/>
+    <v:SolidColorBrush x:Key="Color_ChangePasswordButtonBackgroundFocus" Color="#1ac900"/>
+    <v:SolidColorBrush x:Key="Color_ChangePasswordButtonBackgroundPress" Color="#0f7500"/>
 </ResourceDictionary>
