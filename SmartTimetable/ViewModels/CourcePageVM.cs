@@ -18,6 +18,7 @@ namespace SmartTimetable.ViewModels
     {
         public BindingList<course> courses { get; set; }
 
+        public course selectedItem { get; set; }
 
         public CoursePageVM()
         {
@@ -25,7 +26,6 @@ namespace SmartTimetable.ViewModels
             courses = DataBase.timetableDB.course.Local.ToBindingList();
 
         }
-
 
 
 
@@ -47,6 +47,27 @@ namespace SmartTimetable.ViewModels
             for (int i = 0; i < courses.Count; i++)
             {
                 if (courses[i] == null) courses.RemoveAt(i);
+            }
+        }
+
+        public ICommand Delete
+        {
+            get
+            {
+                return new RelayCommand(() =>
+                {
+                    DeleteItem();
+                });
+            }
+        }
+
+
+        private void DeleteItem()
+        {
+            if (selectedItem != null)
+            {
+                courses.AllowRemove = true;
+                courses.Remove(selectedItem);
             }
         }
     }

@@ -287,7 +287,7 @@ namespace SmartTimetable.ViewModels
                     //   }
                 }  
             }
-            DataBase.timetableDB.SaveChanges();
+            DataBase.UpdateDB();
         }
         private timetable CheckLesson(List<timetable> currWeek, int date,int time,int day,int course,int group) //Проверка урока на наличие в бд
         {

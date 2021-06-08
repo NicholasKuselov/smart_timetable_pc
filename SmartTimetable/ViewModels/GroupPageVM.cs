@@ -17,7 +17,7 @@ namespace SmartTimetable.ViewModels
     {
         public BindingList<group> groups { get; set; }
 
-
+        public group selectedItem { get; set; }
         public GroupPageVM()
         {
             DataBase.timetableDB.group.Load();
@@ -31,8 +31,38 @@ namespace SmartTimetable.ViewModels
             {
                 return new RelayCommand(() =>
                 {
+                    CheckListForNull();
                     DataBase.UpdateDB();
                 });
+            }
+        }
+
+        public ICommand Delete
+        {
+            get
+            {
+                return new RelayCommand(() =>
+                {
+                    DeleteItem();
+                });
+            }
+        }
+
+        private void CheckListForNull()
+        {
+            for (int i = groups.Count - 1; i >= 0; i--)
+            {
+                if (groups[i].name == "")
+                { groups.RemoveAt(i);}
+            }
+        }
+
+        private void DeleteItem()
+        {
+            if (selectedItem != null)
+            {
+                groups.AllowRemove = true;
+                groups.Remove(selectedItem);
             }
         }
     }

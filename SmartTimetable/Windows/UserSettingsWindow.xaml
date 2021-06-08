@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SmartTimetable.Windows" xmlns:viewmodels="clr-namespace:SmartTimetable.ViewModels"
         mc:Ignorable="d"
-        Title="UserSettingsWindow" Height="400" Width="500">
+        Title="Налаштування користувача" Height="400" Width="500">
 
     <Window.Resources>
         <ResourceDictionary>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SmartTimetable.Windows" xmlns:viewmodels="clr-namespace:SmartTimetable.ViewModels"
         mc:Ignorable="d"
-        Title="WeekCreateWindow" Height="150" Width="300" ResizeMode="NoResize">
+        Title="Створення тижня" Height="150" Width="300" ResizeMode="NoResize">
     <Window.DataContext>
         <viewmodels:WeekCreateWindowVM></viewmodels:WeekCreateWindowVM>
     </Window.DataContext>

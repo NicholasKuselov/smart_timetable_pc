@@ -75,8 +75,8 @@
         
         <StackPanel Orientation="Vertical" Grid.Row="2" Background="{DynamicResource Color_MainWindow}">
             <Label Content="{DynamicResource lAuth}" Foreground="{DynamicResource Color_ProgramNameLaberForecolor}"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,15,0,30" FontSize="24"/>
-            <TextBox Text="{Binding login}" Style="{DynamicResource LoginTextBoxStyle}" Width="200" Margin="0,0,0,20"/>
-            <TextBox Text="{Binding password}" Style="{DynamicResource PassTextBoxStyle}" Width="200" Margin="0,0,0,20"/>
+            <TextBox Text="{Binding login}" Style="{DynamicResource LoginTextBoxStyle}" Width="200" Margin="0,0,0,20" />
+            <TextBox Text="{Binding password}" Style="{DynamicResource PassTextBoxStyle}"  Width="200" Margin="0,0,0,20" FontFamily="/SmartTimetable;component/Resources/Fonts/#Password"/>
             <Button Grid.Row="4" Command="{Binding bAuth}" Template="{DynamicResource AuthButton}" Width="160" Height="30"/>
             <Button Grid.Row="4" Template="{DynamicResource ForgotPasswordButton}" Width="180" Height="40" Margin="0,40,0,0"/>
             <TextBlock HorizontalAlignment="Center" FontSize="12" Margin="0,30,0,0"><Hyperlink Click="Hyperlink_Click" >GitHub</Hyperlink></TextBlock>

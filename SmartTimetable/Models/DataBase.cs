@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace SmartTimetable.Models
 {
@@ -18,9 +19,17 @@ namespace SmartTimetable.Models
             timetableDB = new SmartTimetableDBContext();
         }
 
-        public static void UpdateDB() //try catch
+        public static void UpdateDB()
         {
-            timetableDB.SaveChanges();
+            try
+            {
+                timetableDB.SaveChanges();
+                MessageBox.Show("Операція виконана успішно", "Збереження змін", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message,"Помилка збереження змін",MessageBoxButton.OK,MessageBoxImage.Error);
+            }
         }
         
         public static bool Auth(string login,string passHex)

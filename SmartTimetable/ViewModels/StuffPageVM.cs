@@ -29,7 +29,7 @@ namespace SmartTimetable.ViewModels
         {
             DataBase.timetableDB.teacher.Load();
             ts = DataBase.timetableDB.teacher.Local.ToBindingList();
-                //MessageBox.Show(timetableDB.teacher.);      
+
         }
 
         public ICommand Save
@@ -39,7 +39,7 @@ namespace SmartTimetable.ViewModels
                 return new RelayCommand(() =>
                 {
                     CheckListForNull();
-                    DataBase.timetableDB.SaveChanges();
+                    DataBase.UpdateDB();
                 });
             }
         }

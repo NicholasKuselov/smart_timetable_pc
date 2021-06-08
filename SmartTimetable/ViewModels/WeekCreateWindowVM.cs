@@ -37,7 +37,7 @@ namespace SmartTimetable.ViewModels
                     {
                         if (dateFrom.DayOfWeek != DayOfWeek.Monday)
                         {
-                            MessageBox.Show("Date not Monday");
+                            MessageBox.Show("Обрана дата не є понеділком!","Помилка",MessageBoxButton.OK,MessageBoxImage.Error);
                             return;
                         }
                         week newWeek = new week();

@@ -10,13 +10,13 @@
   <Class Name="SmartTimetable.MainWindow" BaseTypeListCollapsed="true">
     <Position X="8.75" Y="26.75" Width="4" />
     <TypeIdentifier>
-      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAIAAACAAAAAAAAIAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Windows\MainWindow.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="SmartTimetable.Controllers.WindowSizing">
-    <Position X="7.5" Y="9.5" Width="6.75" />
+    <Position X="0.5" Y="6.5" Width="6.75" />
     <NestedTypes>
       <Enum Name="SmartTimetable.Controllers.WindowSizing.ABEdge" Collapsed="true">
         <TypeIdentifier>
@@ -62,7 +62,7 @@
   <Class Name="SmartTimetable.Models.DataBase">
     <Position X="10" Y="23.75" Width="3" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAABAAAAAAABA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAACABAAABA=</HashCode>
       <FileName>Models\DataBase.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -81,7 +81,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SmartTimetable.Models.Week">
-    <Position X="2.25" Y="14.75" Width="2" />
+    <Position X="25.5" Y="8" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AgAAAAAAAAAAAAAEAAAAAAAAgAAIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Week.cs</FileName>
@@ -95,31 +95,28 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SmartTimetable.Models.DataBaseModels.course">
-    <Position X="1" Y="4.5" Width="3.25" />
+    <Position X="25.5" Y="5.5" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAQAAAAAAAACAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAQAAEAAAAACAAAAQAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\DataBaseModels\course.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SmartTimetable.Models.DataBaseModels.dates">
-    <Position X="8.75" Y="0.75" Width="3.25" />
+    <Position X="29" Y="3" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAAQAAAAA=</HashCode>
       <FileName>Models\DataBaseModels\dates.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SmartTimetable.Models.DataBaseModels.day">
-    <Position X="14" Y="4" Width="3.25" />
+    <Position X="22" Y="3" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQEAAAAAAAACAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAACAAAAAA=</HashCode>
       <FileName>Models\DataBaseModels\day.cs</FileName>
     </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Property Name="timetable" />
-    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="SmartTimetable.Models.DataBaseModels.group">
-    <Position X="16.25" Y="2.25" Width="3.25" />
+    <Position X="29" Y="0.5" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAQEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\DataBaseModels\group.cs</FileName>
@@ -133,42 +130,42 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SmartTimetable.Models.DataBaseModels.subject">
-    <Position X="2" Y="5.5" Width="3.25" />
+    <Position X="29" Y="5.5" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAQEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\DataBaseModels\subject.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SmartTimetable.Models.DataBaseModels.teacher">
-    <Position X="9" Y="2" Width="3.25" />
+    <Position X="25.5" Y="3" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAQEAAAAAAAAAAAAAAE=</HashCode>
       <FileName>Models\DataBaseModels\teacher.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SmartTimetable.Models.DataBaseModels.times">
-    <Position X="5.5" Y="1.25" Width="3.25" />
+    <Position X="25.5" Y="0.5" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAFAA=</HashCode>
       <FileName>Models\DataBaseModels\times.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SmartTimetable.Models.DataBaseModels.timetable">
-    <Position X="7" Y="18.75" Width="2.25" />
+    <Position X="22" Y="5.5" Width="3.25" />
     <TypeIdentifier>
       <HashCode>RQEAAFAAIAAAAAAAAIAAABBAAgAAAAABIAIAAIAAASA=</HashCode>
       <FileName>Models\DataBaseModels\timetable.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SmartTimetable.Models.DataBaseModels.users">
-    <Position X="16.25" Y="0.5" Width="2.25" />
+    <Position X="29" Y="8.25" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAEAAAAAAAAAgAAEAA=</HashCode>
       <FileName>Models\DataBaseModels\users.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SmartTimetable.Models.DataBaseModels.week">
-    <Position X="6" Y="3.5" Width="3.25" />
+    <Position X="22" Y="0.5" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAACAAAAAAAAAAAAAAgAQAAAAAAAAQAAAAAAA=</HashCode>
       <FileName>Models\DataBaseModels\week.cs</FileName>
@@ -198,14 +195,6 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="SmartTimetable.Pages.Subjects" BaseTypeListCollapsed="true">
-    <Position X="4.75" Y="16.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Pages\Subjects.xaml.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
   <Class Name="SmartTimetable.Pages.Timetable" BaseTypeListCollapsed="true">
     <Position X="0.5" Y="13.5" Width="1.5" />
     <TypeIdentifier>
@@ -223,7 +212,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="SmartTimetable.Properties.Resources">
-    <Position X="4.75" Y="3.5" Width="3.25" />
+    <Position X="36.25" Y="14" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
     </TypeIdentifier>
@@ -235,59 +224,53 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SmartTimetable.ViewModels.CoursePageVM">
-    <Position X="0.5" Y="30.25" Width="3" />
+    <Position X="40" Y="19.5" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAACAAAAAAAEAAAAAAAAAA=</HashCode>
       <FileName>ViewModels\CourcePageVM.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SmartTimetable.ViewModels.GroupPageVM">
-    <Position X="19" Y="2.5" Width="3" />
+    <Position X="36.25" Y="22" Width="3.5" />
     <TypeIdentifier>
-      <HashCode>QAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ViewModels\GroupPageVM.cs</FileName>
     </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Property Name="groups" />
-    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="SmartTimetable.ViewModels.MainViewModel">
-    <Position X="13.5" Y="4" Width="3.25" />
+    <Position X="40" Y="14" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>AhAAAEgCAAAAAAAAAIAAAAAAICAAAAAEAAAAAAEAAKI=</HashCode>
+      <HashCode>AhAAAEgCAAAAAAAAAIAAAAAAICAAAAAEAAEAAAEAAKI=</HashCode>
       <FileName>ViewModels\MainViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SmartTimetable.ViewModels.StuffPageVM">
-    <Position X="1.25" Y="10.5" Width="3.5" />
+    <Position X="36.25" Y="16.75" Width="3.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAE=</HashCode>
+      <HashCode>AAAAAIAAAAAAAAAAAQAAAAAACAEAAAAAAgAAAAAQAAE=</HashCode>
       <FileName>ViewModels\StuffPageVM.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SmartTimetable.ViewModels.SubjectPageVM">
-    <Position X="7.75" Y="6.25" Width="3" />
+    <Position X="36.25" Y="19.75" Width="3.5" />
     <TypeIdentifier>
       <HashCode>QAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ViewModels\SubjectPageVM.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SmartTimetable.ViewModels.TimetableWindowViewModel">
-    <Position X="16.25" Y="14.5" Width="6.25" />
+    <Position X="30.75" Y="14" Width="5.25" />
     <TypeIdentifier>
-      <HashCode>QBBAAcAAEgAwBAAAEAAAAARAkwKAAQCIcEoAAAAAwAY=</HashCode>
+      <HashCode>QBBAAcAAEgAwhAAAEAAAAARAkwOAAQCIcEoAAAAQwAY=</HashCode>
       <FileName>ViewModels\TimetableWindowViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SmartTimetable.ViewModels.WeekCreateWindowVM">
-    <Position X="16.75" Y="6.25" Width="2.75" />
+    <Position X="40" Y="21.75" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>ABQAAQAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <HashCode>ABQAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
       <FileName>ViewModels\WeekCreateWindowVM.cs</FileName>
     </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Property Name="weeks" />
-    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="SmartTimetable.Windows.WeekCreateWindow" BaseTypeListCollapsed="true">
     <Position X="4" Y="13.25" Width="1.75" />

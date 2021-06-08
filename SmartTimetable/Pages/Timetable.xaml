@@ -55,7 +55,7 @@
 
                 <StackPanel Grid.Row="0" Orientation="Horizontal" FlowDirection="LeftToRight" Background="{DynamicResource Color_WeekListPanel}">
                     <Button Width="25" Height="25" Background="Red" HorizontalAlignment="Left" Command="{Binding Save}" Template="{DynamicResource SaveButton}"/>
-                    <Button Width="25" Height="25" HorizontalAlignment="Left" Command="{Binding Delete}" Template="{DynamicResource DeleteStuffButton}" Margin="10,0,0,0"/>
+                    <Button Width="25" Height="25" HorizontalAlignment="Left" Command="{Binding Delete}" Template="{DynamicResource DeleteLessonButton}" Margin="10,0,0,0"/>
                 </StackPanel>
 
                 <ScrollViewer Grid.Row="1">

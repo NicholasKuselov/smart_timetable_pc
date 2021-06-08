@@ -145,7 +145,6 @@
     <Compile Include="Models\DataBase.cs" />
     <Compile Include="Models\DataBaseModels\SmartTimetableDBContext.cs" />
     <Compile Include="Models\DataBaseModels\times.cs" />
-    <Compile Include="Models\IWindowNotifier.cs" />
     <Compile Include="Models\LessonsTime.cs" />
     <Compile Include="Models\LessonTimeModel.cs" />
     <Compile Include="Models\Week.cs" />
@@ -332,6 +331,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Resource Include="Resources\Fonts\password.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

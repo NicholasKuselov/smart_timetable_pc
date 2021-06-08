@@ -53,12 +53,14 @@
         <Style.Triggers>
             <Trigger Property="Text" Value="">
                 <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                <Setter Property="FontFamily" Value="Segoe UI" />
             </Trigger>
             <Trigger Property="Text" Value="{x:Null}">
                 <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                <Setter Property="FontFamily" Value="Segoe UI" />
             </Trigger>
             <Trigger Property="IsKeyboardFocused" Value="True">
-                <Setter Property="Background" Value="Transparent" />
+                <Setter Property="FontFamily" Value="/SmartTimetable;component/Resources/Fonts/#Password" />
             </Trigger>
         </Style.Triggers>
     </Style>

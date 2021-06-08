@@ -18,7 +18,7 @@
 
     <ControlTemplate x:Key="DeleteStuffButton" TargetType="{x:Type Button}">
         <Border   Name="border" Background="Transparent">
-            <ContentPresenter Content="{DynamicResource DeleteIco1}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <ContentPresenter Content="{DynamicResource DeleteIco2}" HorizontalAlignment="Center" VerticalAlignment="Center" />
         </Border>
         <ControlTemplate.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
@@ -32,7 +32,7 @@
 
     <ControlTemplate x:Key="DeleteGroupButton" TargetType="{x:Type Button}">
         <Border   Name="border" Background="Transparent">
-            <ContentPresenter Content="{DynamicResource DeleteIco1}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <ContentPresenter Content="{DynamicResource DeleteIco3}" HorizontalAlignment="Center" VerticalAlignment="Center" />
         </Border>
         <ControlTemplate.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
@@ -46,7 +46,7 @@
 
     <ControlTemplate x:Key="DeleteSubjectButton" TargetType="{x:Type Button}">
         <Border   Name="border" Background="Transparent">
-            <ContentPresenter Content="{DynamicResource DeleteIco1}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <ContentPresenter Content="{DynamicResource DeleteIco4}" HorizontalAlignment="Center" VerticalAlignment="Center" />
         </Border>
         <ControlTemplate.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
@@ -60,7 +60,7 @@
 
     <ControlTemplate x:Key="DeleteCourseButton" TargetType="{x:Type Button}">
         <Border   Name="border" Background="Transparent">
-            <ContentPresenter Content="{DynamicResource DeleteIco1}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <ContentPresenter Content="{DynamicResource DeleteIco5}" HorizontalAlignment="Center" VerticalAlignment="Center" />
         </Border>
         <ControlTemplate.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
